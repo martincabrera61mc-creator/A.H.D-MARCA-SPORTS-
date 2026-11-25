@@ -7,294 +7,134 @@
   <link rel="stylesheet" href="estilo.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">
-        <span class="brand-badge">A.H.D</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-group">
+        <span class="brand-sigla">A.H.D</span>
         <div>
-          <h1>A.H.D MARCA SPORTS</h1>
-          <p class="brand-sub">Asociación Hispanoamericana del Deporte — Martín Cabrera Deportes</p>
+          <h1 class="site-title">A.H.D MARCA SPORTS</h1>
+          <p class="site-subtitle">Asociación Hispanoamericana del Deporte — Martín Cabrera Deportes</p>
         </div>
       </div>
 
-      <nav class="nav-links" aria-label="Navegación principal">
-        <button class="nav-btn active" data-tab="inicio">Inicio</button>
-        <button class="nav-btn" data-tab="acciones">Líneas de Acción</button>
-        <button class="nav-btn" data-tab="afiliacion">Afiliación y Cédula</button>
-        <button class="nav-btn" data-tab="videos">Eventos y Videos</button>
-        <button class="nav-btn" data-tab="estatutos">Estatutos y Marco</button>
+      <nav class="main-nav" aria-label="Secciones principales">
+        <button class="nav-btn active" data-section="inicio" type="button">Inicio</button>
+        <button class="nav-btn" data-section="actividades" type="button">Actividades y Pestañas</button>
+        <button class="nav-btn" data-section="gremio" type="button">Gremio Deportivo</button>
+        <button class="nav-btn" data-section="naturaleza" type="button">Naturaleza Jurídica</button>
       </nav>
-
-      <button id="toggleSoundBtn" class="sound-btn" type="button" aria-pressed="true">
-        🔊 Sonido: ON
-      </button>
     </div>
   </header>
 
-  <main class="container main-content">
-    <!-- PESTAÑA 1: INICIO -->
-    <section id="tab-inicio" class="tab-panel active">
-      <div class="hero-card">
-        <div class="hero-text">
-          <span class="pill">Nacida en 2020 • Santiago de Cali, Valle, Colombia</span>
-          <h2>Impulsamos el gremio deportivo de Hispanoamérica y el mundo</h2>
-          <p>
-            Institución de utilidad común y sin ánimo de lucro dedicada a entrenadores, asistentes técnicos,
-            preparadores físicos, fisioterapeutas, médicos deportólogos, administrativos, árbitros y periodistas
-            en el ámbito deportivo.
-          </p>
-          <div class="hero-actions">
-            <button id="goRegisterBtn" class="btn btn-primary" type="button">Afiliación Gratis en Línea</button>
-            <button id="goLoginBtn" class="btn btn-secondary" type="button">Ingresar con Cédula</button>
-          </div>
-        </div>
-
-        <div class="stats-grid">
-          <div class="stat-box">
-            <span class="stat-number" id="affiliateCountDisplay">458</span>
-            <span class="stat-label">Afiliados reportados en el mundo</span>
-          </div>
-          <div class="stat-box">
-            <span class="stat-number">Gratis</span>
-            <span class="stat-label">Afiliación en línea</span>
-          </div>
-          <div class="stat-box">
-            <span class="stat-number">$20.000</span>
-            <span class="stat-label">Carnetización (Pesos Colombianos)</span>
-          </div>
-          <div class="stat-box">
-            <span class="stat-number">3 Clases</span>
-            <span class="stat-label">Gestores, Adherentes y Honorarios</span>
-          </div>
+  <main class="container page-main">
+    <!-- INICIO: MISIÓN, VISIÓN Y ALCANCE -->
+    <section id="sec-inicio" class="section-panel active">
+      <div class="hero-box">
+        <span class="badge">Entidad de Utilidad Común y Sin Ánimo de Lucro • Nivel Mundial</span>
+        <h2>ASOCIACIÓN HISPANOAMERICANA DEL DEPORTE MARCA SPORTS</h2>
+        <p class="hero-lead">
+          Entrenadores, Asistentes Técnicos, Preparadores Físicos, Fisioterapeutas, Médicos Deportólogos,
+          Administrativos, Árbitros y Periodistas en el Ámbito Deportivo — &ldquo;Martín Cabrera Deportes&rdquo;
+          (Sigla: <strong>A.H.D MARCA SPORTS</strong>).
+        </p>
+        <div class="hero-cta">
+          <button id="irActividadesBtn" class="btn btn-primary" type="button">
+            Explorar Pestañas de Capacitación y Bienestar
+          </button>
+          <button id="irNaturalezaBtn" class="btn btn-outline" type="button">
+            Ver Naturaleza Jurídica
+          </button>
         </div>
       </div>
 
-      <div class="two-col">
+      <div class="grid-2">
         <article class="card">
-          <h3>Misión Institucional</h3>
+          <h3>Nuestra Misión Institucional</h3>
           <p>
-            Formación, capacitación y actualización integral de personas con competencias para asumir, aplicar y
-            transferir conocimientos e impactar positivamente la realidad social y deportiva en el mundo,
-            promoviendo la excelencia docente, la calidad formativa, la investigación y el acompañamiento
-            pedagógico, técnico y laboral.
+            &ldquo;La formación, capacitación, Actualización integral de personas con competencias para asumir,
+            aplicar y transferir los conocimientos e impactar positivamente la realidad social y deportiva en el
+            mundo, para contribuir al desarrollo sostenible de la Profesión en el deporte.&rdquo; Propende por la
+            excelencia docente, la calidad en la formación, la investigación, el acompañamiento pedagógico,
+            técnico, laboral y el desarrollo profesional y personal de los afiliados.
           </p>
         </article>
+
         <article class="card">
-          <h3>Visión Institucional</h3>
+          <h3>Nuestra Visión Institucional</h3>
           <p>
-            Mejorar la calidad de los servicios profesionales de los afiliados mediante educación continua y
-            actualización permanente ante instituciones académicas y deportivas de relevancia nacional e
-            internacional, consolidándose en las disciplinas y áreas del deporte hispanoamericano.
+            Mejorar la calidad en los servicios profesionales de los afiliados mediante la educación continua y
+            la actualización permanente ante las instituciones académicas y deportivas de mayor relevancia e
+            importancia a nivel nacional e internacional, logrando consolidarse en las disciplinas y áreas del
+            Deporte Hispanoamericano.
           </p>
         </article>
+      </div>
+    </section>
+
+    <!-- ACTIVIDADES Y PESTAÑAS DE CAPACITACIÓN Y BIENESTAR SOCIAL -->
+    <section id="sec-actividades" class="section-panel">
+      <div class="section-head">
+        <h2>Actividades de Capacitación, Actualización y Bienestar Social</h2>
+        <p>Selecciona cada pestaña para consultar las líneas de trabajo propuestas por la Asociación.</p>
+      </div>
+
+      <div class="tabs-bar" role="tablist" aria-label="Actividades de la Asociación">
+        <button class="tab-btn active" data-tab="1" type="button" role="tab">1) Capacitación y Certificación</button>
+        <button class="tab-btn" data-tab="2" type="button" role="tab">2) Asociación y Derechos</button>
+        <button class="tab-btn" data-tab="3" type="button" role="tab">3) Representación</button>
+        <button class="tab-btn" data-tab="4" type="button" role="tab">4) Asesoría a Entes</button>
+        <button class="tab-btn" data-tab="5" type="button" role="tab">5) Contratación y Alianzas</button>
+      </div>
+
+      <div id="tabDetailCard" class="card detail-card" role="tabpanel"></div>
+    </section>
+
+    <!-- GREMIO DEPORTIVO -->
+    <section id="sec-gremio" class="section-panel">
+      <div class="section-head">
+        <h2>¿A Quién Está Dirigida?</h2>
+        <p>Integración de perfiles técnicos, científicos, administrativos, arbitrales y comunicativos del deporte.</p>
+      </div>
+
+      <div class="roles-grid">
+        <div class="role-card">Entrenadores deportivos</div>
+        <div class="role-card">Asistentes técnicos</div>
+        <div class="role-card">Preparadores físicos</div>
+        <div class="role-card">Fisioterapeutas</div>
+        <div class="role-card">Médicos deportólogos / deportivos</div>
+        <div class="role-card">Administrativos del deporte</div>
+        <div class="role-card">Árbitros</div>
+        <div class="role-card">Periodistas deportivos</div>
+      </div>
+    </section>
+
+    <!-- NATURALEZA JURÍDICA -->
+    <section id="sec-naturaleza" class="section-panel">
+      <div class="section-head">
+        <h2>Naturaleza Jurídica</h2>
+        <p>Marco legal y carácter institucional registrado en los documentos de la Asociación.</p>
       </div>
 
       <article class="card">
-        <h3>Objetivos Principales de la Asociación</h3>
-        <ul class="styled-list">
-          <li>Ofrecer asesoría integral para la progresión de todos los entrenadores y afiliados.</li>
-          <li>Velar por el buen nombre de la profesión de entrenadores, asistentes técnicos, preparadores físicos, fisioterapeutas, médicos deportólogos, administrativos, árbitros y periodistas deportivos.</li>
-          <li>Defender los intereses colectivos de la Asociación.</li>
-          <li>Fomentar el espíritu de formación y actualización continua entre los afiliados.</li>
-        </ul>
+        <h3>Entidad Sin Ánimo de Lucro y de Utilidad Común</h3>
+        <p>
+          <strong>ASOCIACION HISPANOAMERICANA DEL DEPORTE MARCA SPORTS, ENTRENADORES, ASISTENTES TECNICOS,
+          PREPARADORES FISICOS, FISIOTERAPEUTAS, MEDICOS DEPORTIVOS, ADMINISTRADORES, ARBITROS Y PERIODISTAS
+          EN EL AMBITO DEPORTIVO. &ldquo;MARTIN CABRERA DEPORTES&rdquo;</strong>, sigla <strong>A.H.D MARCA SPORTS</strong>,
+          es una institución de utilidad común y sin ánimo de lucro a nivel mundial, constituida como persona
+          jurídica de derecho privado.
+        </p>
+        <p>
+          Se encuentra regulada, en lo pertinente, por los <strong>artículos 633 a 652 del Código Civil Colombiano</strong>,
+          los <strong>Decretos 2150 de 1995 y 427 de 1996</strong> y demás normas concordantes.
+        </p>
       </article>
-    </section>
-
-    <!-- PESTAÑA 2: LÍNEAS DE ACCIÓN -->
-    <section id="tab-acciones" class="tab-panel">
-      <div class="section-header">
-        <h2>Líneas de Acción y Bienestar Social</h2>
-        <p>Selecciona cada actividad para consultar su alcance para los afiliados y entidades deportivas.</p>
-      </div>
-
-      <div class="subtabs" role="tablist">
-        <button class="subtab-btn active" data-action="1">1. Capacitación y Certificación</button>
-        <button class="subtab-btn" data-action="2">2. Asociación y Derechos</button>
-        <button class="subtab-btn" data-action="3">3. Representación Gremial</button>
-        <button class="subtab-btn" data-action="4">4. Asesoría Institucional</button>
-        <button class="subtab-btn" data-action="5">5. Contratación y Alianzas</button>
-      </div>
-
-      <div id="actionDetailBox" class="card highlight-card"></div>
-    </section>
-
-    <!-- PESTAÑA 3: AFILIACIÓN Y CÉDULA -->
-    <section id="tab-afiliacion" class="tab-panel">
-      <div class="section-header">
-        <h2>Ingreso con Cédula y Registro de Afiliación</h2>
-        <p>Si ya estás afiliado, ingresa con tu número de cédula. Si aún no estás afiliado, regístrate gratis en línea.</p>
-      </div>
-
-      <div class="two-col">
-        <!-- INGRESO POR CÉDULA -->
-        <article class="card">
-          <h3>Ingreso de Afiliados (Por Cédula)</h3>
-          <form id="loginForm" class="form-stack">
-            <label for="loginCedula">Número de Cédula / Documento</label>
-            <input type="text" id="loginCedula" placeholder="Ej. 1012345678" required />
-            <button type="submit" class="btn btn-primary">Ingresar al Portal</button>
-          </form>
-
-          <div id="loginStatus" class="status-box" aria-live="polite"></div>
-
-          <div id="memberDashboard" class="member-panel hidden">
-            <h4>Perfil del Afiliado Activo</h4>
-            <p id="memberInfoText"></p>
-            <div class="member-perks">
-              <p><strong>Beneficios habilitados:</strong> Acceso a capacitaciones y cursos específicos, consulta de eventos de la asociación, carnetización de referencia ($20.000 COP) y publicación de videos.</p>
-              <p class="contact-note">
-                Contacto y orientación: +57 322 726 7413 • Reporte de carnet: +57 314 658 4787.
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <!-- FORMULARIO DE REGISTRO + HOJA DE VIDA -->
-        <article class="card" id="registerCard">
-          <h3>Afiliación Gratuita en Línea (Con Hoja de Vida)</h3>
-          <form id="registerForm" class="form-stack">
-            <label for="regNombre">Nombre completo</label>
-            <input type="text" id="regNombre" placeholder="Tu nombre y apellidos" required />
-
-            <label for="regCedula">Número de cédula / documento</label>
-            <input type="text" id="regCedula" placeholder="Ej. 1144000111" required />
-
-            <label for="regPerfil">Área / Perfil deportivo</label>
-            <select id="regPerfil" required>
-              <option value="">Selecciona tu perfil...</option>
-              <option value="Entrenador Deportivo">Entrenador Deportivo</option>
-              <option value="Asistente Técnico">Asistente Técnico</option>
-              <option value="Preparador Físico">Preparador Físico</option>
-              <option value="Fisioterapeuta">Fisioterapeuta</option>
-              <option value="Médico Deportólogo">Médico Deportólogo</option>
-              <option value="Administrativo Deportivo">Administrativo Deportivo</option>
-              <option value="Árbitro">Árbitro</option>
-              <option value="Periodista Deportivo">Periodista Deportivo</option>
-            </select>
-
-            <label for="regClase">Clase de asociado (Estatutos Art. 9)</label>
-            <select id="regClase" required>
-              <option value="Adherente">Adherente</option>
-              <option value="Gestor">Gestor</option>
-              <option value="Honorario">Honorario</option>
-            </select>
-
-            <label for="regPais">País / Ciudad</label>
-            <input type="text" id="regPais" placeholder="Ej. Colombia - Cali" required />
-
-            <label for="regTelefono">Teléfono / WhatsApp</label>
-            <input type="tel" id="regTelefono" placeholder="Ej. +57 300 000 0000" required />
-
-            <label for="regCv">Adjuntar Hoja de Vida (PDF, DOC, DOCX)</label>
-            <input type="file" id="regCv" accept=".pdf,.doc,.docx" required />
-
-            <button type="submit" class="btn btn-accent">Completar Afiliación Gratuita</button>
-          </form>
-
-          <div id="registerStatus" class="status-box" aria-live="polite"></div>
-        </article>
-      </div>
-    </section>
-
-    <!-- PESTAÑA 4: EVENTOS, VIDEOS Y MONETIZACIÓN -->
-    <section id="tab-videos" class="tab-panel">
-      <div class="section-header">
-        <h2>Eventos, Galería de Videos y Actividad Comercial</h2>
-        <p>Publica videos demostrativos o de capacitación y revisa la actividad de navegación.</p>
-      </div>
-
-      <div class="two-col">
-        <article class="card">
-          <h3>Subir Video de Capacitación o Evento</h3>
-          <form id="videoForm" class="form-stack">
-            <label for="videoTitle">Título del video</label>
-            <input type="text" id="videoTitle" placeholder="Ej. Sesión de preparación física y táctica" required />
-
-            <label for="videoAuthor">Autor o afiliado</label>
-            <input type="text" id="videoAuthor" placeholder="Nombre del afiliado o ponente" required />
-
-            <label for="videoFile">Seleccionar archivo de video (MP4, WebM)</label>
-            <input type="file" id="videoFile" accept="video/mp4,video/webm,video/ogg" required />
-
-            <button type="submit" class="btn btn-primary">Publicar Video</button>
-          </form>
-          <div id="videoStatus" class="status-box" aria-live="polite"></div>
-        </article>
-
-        <article class="card commercial-card">
-          <h3>Espacio Comercial y Registro de Interacción</h3>
-          <p class="promo-banner">
-            <strong>Convocatoria Abierta:</strong> Participa en nuestras charlas, cursos, diplomados y congresos deportivos para mantenerte actualizado. Informes al <strong>+57 322 726 7413</strong>.
-          </p>
-          <div class="metrics-row">
-            <div>
-              <span class="metric-value" id="clickCounter">0</span>
-              <span class="metric-label">Clics registrados en esta sesión</span>
-            </div>
-            <div>
-              <span class="metric-value" id="simulatedRevenue">$0 COP</span>
-              <span class="metric-label">Estimación de prueba local ($50/clic)</span>
-            </div>
-          </div>
-          <button id="sponsorActionBtn" class="btn btn-accent" type="button">
-            Visitar Aliado y Programación de Eventos
-          </button>
-          <p class="small-muted">
-            * Los ingresos reales hacia una cuenta bancaria dependen de redes publicitarias, patrocinios o convenios aprobados y configurados en producción.
-          </p>
-        </article>
-      </div>
-
-      <div id="videosGrid" class="videos-grid"></div>
-    </section>
-
-    <!-- PESTAÑA 5: ESTATUTOS Y MARCO -->
-    <section id="tab-estatutos" class="tab-panel">
-      <div class="section-header">
-        <h2>Estatutos y Naturaleza Jurídica</h2>
-        <p>Información registrada en los documentos constitutivos de la Asociación.</p>
-      </div>
-
-      <div class="card">
-        <h3>Denominación y Naturaleza (Artículos 1, 2 y Acta de Constitución)</h3>
-        <p>
-          <strong>Nombre:</strong> ASOCIACIÓN HISPANOAMERICANA DEL DEPORTE MARCA SPORTS, ENTRENADORES, ASISTENTES TÉCNICOS, PREPARADORES FÍSICOS, FISIOTERAPEUTAS, MÉDICOS DEPORTIVOS, ADMINISTRADORES, ÁRBITROS Y PERIODISTAS EN EL ÁMBITO DEPORTIVO. "MARTÍN CABRERA DEPORTES", sigla <strong>A.H.D MARCA SPORTS</strong>.
-        </p>
-        <p>
-          Entidad sin ánimo de lucro de utilidad común, persona jurídica de derecho privado, regulada en lo pertinente por los <strong>artículos 633 a 652 del Código Civil Colombiano</strong>, los <strong>Decretos 2150 de 1995 y 427 de 1996</strong> y normas concordantes.
-        </p>
-      </div>
-
-      <div class="two-col">
-        <article class="card">
-          <h3>Domicilio y Patrimonio (Artículos 3 y 8 / Parágrafo 1°)</h3>
-          <p>
-            <strong>Domicilio principal:</strong> Santiago de Cali, Departamento del Valle, República de Colombia, con facultad para establecer capítulos, junta directiva y actividades en otras ciudades del país y del exterior.
-          </p>
-          <p>
-            <strong>Patrimonio inicial:</strong> Veinte mil pesos colombianos ($20.000 COP) aportados por asociados gestores, destinado única y exclusivamente al cumplimiento de su objeto y reservas de ley.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Clases de Asociados y Carnetización (Artículo 9)</h3>
-          <ul class="styled-list">
-            <li><strong>Gestores</strong></li>
-            <li><strong>Adherentes</strong></li>
-            <li><strong>Honorarios</strong></li>
-          </ul>
-          <p>
-            El carnet es personal e intransferible como acreditación ante la Asociación y gremios deportivos nacionales e internacionales (valor de carnetización registrado: $20.000 pesos colombianos).
-          </p>
-        </article>
-      </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p><strong>A.H.D MARCA SPORTS</strong> — Santiago de Cali, Valle, Colombia • Informes: +57 322 726 7413</p>
-      <p class="small-muted">Portal deportivo adaptable con acceso por cédula, afiliación con hoja de vida y galería multimedia.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>A.H.D MARCA SPORTS</strong> — Asociación Hispanoamericana del Deporte Marca Sports</p>
     </div>
   </footer>
 
