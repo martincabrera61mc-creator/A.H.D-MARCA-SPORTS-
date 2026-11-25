@@ -1,4 +1,4 @@
-/* Paleta cálida deportiva y estilos institucionales para A.H.D MARCA SPORTS */
+/* Estilos y paleta cálida deportiva para A.H.D MARCA SPORTS */
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: #fffaf5;
@@ -28,9 +28,8 @@ body {
   }
 }
 
-/* Resaltado cálido en mapa SVG interactivo de Hispanoamérica */
 .hispanic-region {
-  transition: transform 0.25s ease, filter 0.25s ease, fill 0.25s ease;
+  transition: transform 0.25s ease, filter 0.25s ease;
   transform-origin: center;
   cursor: pointer;
 }
