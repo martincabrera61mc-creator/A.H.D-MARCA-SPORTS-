@@ -1,79 +1,168 @@
-(() => {
-  // Navegación entre secciones principales
-  const navButtons = document.querySelectorAll(".nav-btn");
-  const sectionPanels = document.querySelectorAll(".section-panel");
+(function () {
+  'use strict';
 
-  function mostrarSeccion(nombreSeccion) {
-    navButtons.forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.section === nombreSeccion);
+  // 1. Menú móvil responsive
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function () {
+      const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!isExpanded));
+      mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
     });
-    sectionPanels.forEach((panel) => {
-      panel.classList.toggle("active", panel.id === `sec-${nombreSeccion}`);
+
+    document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        menuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      });
     });
   }
 
-  navButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      mostrarSeccion(btn.dataset.section);
+  // 2. Interactividad del mapa SVG de Hispanoamérica
+  const regionTitle = document.getElementById('region-title');
+  const regionDesc = document.getElementById('region-desc');
+  document.querySelectorAll('.hispanic-region').forEach(function (el) {
+    el.addEventListener('click', function () {
+      const title = el.getAttribute('data-region');
+      const info = el.getAttribute('data-info');
+      if (regionTitle && title) regionTitle.textContent = title;
+      if (regionDesc && info) regionDesc.textContent = info;
     });
   });
 
-  document.getElementById("irActividadesBtn").addEventListener("click", () => {
-    mostrarSeccion("actividades");
+  // 3. Pestañas de Estatutos
+  const statuteBtns = document.querySelectorAll('.statute-tab-btn');
+  const statutePanels = document.querySelectorAll('.statute-panel');
+
+  statuteBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const target = btn.getAttribute('data-statute-tab');
+
+      statuteBtns.forEach(function (b) {
+        b.setAttribute('aria-selected', 'false');
+        b.className = 'statute-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white/10 text-orange-100 hover:bg-white/20 cursor-pointer';
+      });
+
+      btn.setAttribute('aria-selected', 'true');
+      btn.className = 'statute-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-orange-600 text-white cursor-pointer';
+
+      statutePanels.forEach(function (panel) {
+        panel.classList.toggle('hidden', panel.id !== 'statute-panel-' + target);
+      });
+    });
   });
 
-  document.getElementById("irNaturalezaBtn").addEventListener("click", () => {
-    mostrarSeccion("naturaleza");
+  // 4. Pestañas principales de Ecosistema Deportivo y Afiliados
+  const ecoBtns = document.querySelectorAll('.eco-tab-btn');
+  const ecoPanels = document.querySelectorAll('.eco-panel');
+
+  ecoBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const target = btn.getAttribute('data-eco-tab');
+
+      ecoBtns.forEach(function (b) {
+        b.setAttribute('aria-selected', 'false');
+        b.className = 'eco-tab-btn px-4 sm:px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-orange-50 text-stone-700 hover:bg-orange-100 transition-all cursor-pointer';
+      });
+
+      btn.setAttribute('aria-selected', 'true');
+      btn.className = 'eco-tab-btn px-4 sm:px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-ahd-warmDark text-white shadow-md transition-all cursor-pointer';
+
+      ecoPanels.forEach(function (panel) {
+        panel.classList.toggle('hidden', panel.id !== 'eco-panel-' + target);
+      });
+    });
   });
 
-  // Pestañas de actividades de capacitación, actualización y bienestar social
-  const actividades = {
-    1: {
-      titulo: "1) Capacitación y Certificación",
-      descripcion:
-        "Capacitar a todos los Afiliados a través de charlas, capacitaciones, cursos, diplomados y congresos deportivos, desde todos los enfoques del deporte, y certificarlos de manera online o presencial."
-    },
-    2: {
-      titulo: "2) Asociación y Defensa de Derechos",
-      descripcion:
-        "Asociar a los afiliados con el fin de velar por sus derechos formativos, deportivos, sociales y laborales."
-    },
-    3: {
-      titulo: "3) Representación Nacional e Internacional",
-      descripcion:
-        "Representar a los afiliados ante los diferentes entes deportivos del Estado y no gubernamentales a nivel nacional e internacional."
-    },
-    4: {
-      titulo: "4) Asesoría a Entes Deportivos y Educativos",
-      descripcion:
-        "Asesorar entes deportivos, educativos oficiales y no gubernamentales desde las áreas administrativa, pedagógica, educativa y social, entre otras."
-    },
-    5: {
-      titulo: "5) Contratación y Alianzas",
-      descripcion:
-        "Hacer todo tipo de contratación con instituciones educativas de nivel técnico, tecnológico y universitario, federaciones deportivas nacionales e internacionales, clubes y escuelas deportivas nacionales e internacionales, entidades del Estado y empresas privadas, entre otras."
+  // 5. Filtro de roles en el ámbito deportivo
+  const filterBtns = document.querySelectorAll('.role-filter-btn');
+  const roleCards = document.querySelectorAll('.role-card');
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const filter = btn.getAttribute('data-role-filter');
+
+      filterBtns.forEach(function (b) {
+        b.className = 'role-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-stone-700 border border-orange-200 hover:bg-orange-50 cursor-pointer';
+      });
+
+      btn.className = 'role-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-orange-600 text-white cursor-pointer';
+
+      roleCards.forEach(function (card) {
+        const area = card.getAttribute('data-area');
+        if (filter === 'todos' || area === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // 6. Modal interactivo de afiliación / carnet / convenio
+  const modal = document.getElementById('action-modal');
+  const modalBadge = document.getElementById('modal-badge');
+  const modalTitle = document.getElementById('modal-title');
+  const closeModalBtn = document.getElementById('close-modal-btn');
+  const cancelModalBtn = document.getElementById('cancel-modal-btn');
+  const modalForm = document.getElementById('modal-form');
+  const formFeedback = document.getElementById('form-feedback');
+
+  window.openModal = function (mode) {
+    if (!modal) return;
+    if (formFeedback) {
+      formFeedback.classList.add('hidden');
+      formFeedback.textContent = '';
     }
+    if (mode === 'carnet') {
+      modalBadge.textContent = 'Carnetización • $20.000 COP';
+      modalTitle.textContent = 'Solicitud de Carnet Acreditativo';
+    } else if (mode === 'convenio') {
+      modalBadge.textContent = 'Convenio Marco Institucional';
+      modalTitle.textContent = 'Solicitud de Practicantes y Convenio';
+    } else {
+      modalBadge.textContent = 'Afiliación Totalmente Gratis';
+      modalTitle.textContent = 'Formulario de Afiliación en Línea';
+    }
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
   };
 
-  const tabButtons = document.querySelectorAll(".tab-btn");
-  const tabDetailCard = document.getElementById("tabDetailCard");
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
 
-  function renderActividad(id) {
-    const item = actividades[id] || actividades["1"];
-    tabDetailCard.innerHTML = `
-      <h3>${item.titulo}</h3>
-      <p>${item.descripcion}</p>
-    `;
-    tabButtons.forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.tab === String(id));
+  if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+  if (cancelModalBtn) cancelModalBtn.addEventListener('click', closeModal);
+  if (modal) {
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeModal();
     });
   }
 
-  tabButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      renderActividad(btn.dataset.tab);
+  if (modalForm) {
+    modalForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('full-name');
+      const nameVal = nameInput ? nameInput.value.trim() : '';
+      if (formFeedback) {
+        formFeedback.classList.remove('hidden');
+        formFeedback.textContent =
+          'Solicitud preparada para ' +
+          (nameVal || 'tu perfil') +
+          ' ante A.H.D MARCA SPORTS. Para confirmación directa comunícate al +57 3227267413 o +57 3146584787.';
+      }
+      modalForm.reset();
     });
-  });
-
-  renderActividad(1);
+  }
 })();
