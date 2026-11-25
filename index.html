@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AHD MARCA SPORTS | Asociación Hispanoamericana del Deporte — Martín Cabrera Deportes</title>
+  <title>A.H.D MARCA SPORTS | Asociación Hispanoamericana del Deporte</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,12 +36,11 @@
 </head>
 <body class="antialiased selection:bg-orange-600 selection:text-white">
 
-  <!-- Barra de Navegación Superior Fija y Responsiva -->
+  <!-- Barra de Navegación Superior -->
   <header class="sticky top-0 z-40 bg-ahd-warmDark/95 backdrop-blur-md border-b border-orange-900/50 text-white shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 sm:h-20">
-        <!-- Marca Institucional -->
-        <a href="#inicio" class="flex items-center gap-3 group focus:outline-none">
+      <div class="flex items-center justify-between h-16 sm:h-20 gap-3">
+        <a href="#inicio" class="flex items-center gap-3 group focus:outline-none shrink-0">
           <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-amber-500 via-orange-600 to-red-700 border border-amber-300/40 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
             <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -49,44 +48,45 @@
             </svg>
           </div>
           <div class="leading-tight">
-            <span class="block text-sm sm:text-base font-extrabold tracking-wide text-white">
-              A.H.D MARCA SPORTS
-            </span>
-            <span class="block text-[10px] sm:text-xs font-medium text-amber-300 tracking-wider uppercase">
-              Martín Cabrera Deportes
-            </span>
+            <span class="block text-sm sm:text-base font-extrabold tracking-wide text-white">A.H.D MARCA SPORTS</span>
+            <span class="block text-[10px] sm:text-xs font-medium text-amber-300 tracking-wider uppercase">Martín Cabrera Deportes</span>
           </div>
         </a>
 
-        <!-- Enlaces de Navegación Escritorio -->
         <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium" aria-label="Navegación principal">
           <a href="#inicio" class="px-3 py-2 rounded-lg text-orange-100 hover:text-white hover:bg-white/10 transition-colors">Inicio</a>
+          <a href="#afiliacion-portal" class="px-3 py-2 rounded-lg text-orange-100 hover:text-white hover:bg-white/10 transition-colors">Cédula y Registro</a>
           <a href="#mision-vision" class="px-3 py-2 rounded-lg text-orange-100 hover:text-white hover:bg-white/10 transition-colors">Misión y Visión</a>
           <a href="#estatutos" class="px-3 py-2 rounded-lg text-orange-100 hover:text-white hover:bg-white/10 transition-colors">Estatutos</a>
-          <a href="#ecosistema" class="px-3 py-2 rounded-lg text-orange-100 hover:text-white hover:bg-white/10 transition-colors">Gremio y Afiliados</a>
-          <a href="#capacitacion-alianzas" class="px-3 py-2 rounded-lg text-orange-100 hover:text-white hover:bg-white/10 transition-colors">Capacitación y Alianzas</a>
-          <a href="#organigrama" class="px-3 py-2 rounded-lg text-orange-100 hover:text-white hover:bg-white/10 transition-colors">Organigrama</a>
+          <a href="#ecosistema" class="px-3 py-2 rounded-lg text-orange-100 hover:text-white hover:bg-white/10 transition-colors">Gremio y Carnet</a>
+          <a href="#capacitacion-alianzas" class="px-3 py-2 rounded-lg text-orange-100 hover:text-white hover:bg-white/10 transition-colors">Capacitaciones y Alianzas</a>
+          <a href="#videos-comercial" class="px-3 py-2 rounded-lg text-orange-100 hover:text-white hover:bg-white/10 transition-colors">Videos</a>
         </nav>
 
-        <!-- Acción Rápida de Afiliación -->
-        <div class="hidden sm:flex items-center gap-2">
+        <div class="flex items-center gap-2">
           <button
+            id="toggle-sound-btn"
             type="button"
-            onclick="openModal('afiliacion')"
-            class="px-4 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white text-xs sm:text-sm font-bold shadow-md shadow-orange-950/40 transition-all cursor-pointer"
+            aria-pressed="true"
+            class="px-3 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-amber-300/30 text-xs font-bold text-amber-200 cursor-pointer"
+          >
+            🔊 Sonido ON
+          </button>
+          <a
+            href="#afiliacion-portal"
+            class="hidden sm:inline-flex px-4 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs sm:text-sm font-bold shadow-md transition-all"
           >
             Afiliación Gratis
-          </button>
+          </a>
         </div>
 
-        <!-- Botón Menú Móvil -->
         <button
           id="mobile-menu-btn"
           type="button"
           aria-expanded="false"
           aria-controls="mobile-menu"
           aria-label="Abrir menú de navegación"
-          class="lg:hidden p-3 rounded-xl text-orange-100 hover:text-white hover:bg-white/10 transition-colors"
+          class="lg:hidden p-2.5 rounded-xl text-orange-100 hover:text-white hover:bg-white/10 transition-colors"
         >
           <svg id="menu-icon-open" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -98,34 +98,24 @@
       </div>
     </div>
 
-    <!-- Menú Desplegable Móvil -->
     <div id="mobile-menu" class="lg:hidden hidden bg-ahd-warmMid border-t border-orange-800/80 px-4 py-4 space-y-1">
-      <a href="#inicio" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-orange-50 hover:bg-white/10">Inicio</a>
-      <a href="#mision-vision" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-orange-50 hover:bg-white/10">Misión y Visión</a>
-      <a href="#estatutos" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-orange-50 hover:bg-white/10">Estatutos y Marco Legal</a>
-      <a href="#ecosistema" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-orange-50 hover:bg-white/10">Gremio Deportivo y Afiliados</a>
-      <a href="#capacitacion-alianzas" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-orange-50 hover:bg-white/10">Capacitaciones y Alianzas</a>
-      <a href="#organigrama" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-orange-50 hover:bg-white/10">Organigrama Directivo</a>
-      <div class="pt-2">
-        <button
-          type="button"
-          onclick="openModal('afiliacion')"
-          class="w-full py-3.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-extrabold text-center shadow-md"
-        >
-          Afiliación Totalmente Gratis (En Línea)
-        </button>
-      </div>
+      <a href="#inicio" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-orange-50 hover:bg-white/10">Inicio</a>
+      <a href="#afiliacion-portal" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-orange-50 hover:bg-white/10">Ingreso por Cédula y Registro</a>
+      <a href="#mision-vision" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-orange-50 hover:bg-white/10">Misión y Visión</a>
+      <a href="#estatutos" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-orange-50 hover:bg-white/10">Estatutos y Marco Legal</a>
+      <a href="#ecosistema" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-orange-50 hover:bg-white/10">Gremio Deportivo y Carnet</a>
+      <a href="#capacitacion-alianzas" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-orange-50 hover:bg-white/10">Capacitaciones y Alianzas</a>
+      <a href="#videos-comercial" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-orange-50 hover:bg-white/10">Videos y Actividad</a>
     </div>
   </header>
 
   <main>
     <!-- ===================================================================== -->
-    <!-- 1. HERO / ENCABEZADO INSTITUCIONAL E HISPANOAMÉRICA                  -->
+    <!-- 1. HERO INSTITUCIONAL Y MAPA INTERACTIVO DE HISPANOAMÉRICA          -->
     <!-- ===================================================================== -->
     <section id="inicio" class="hero-pattern text-white relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          <!-- Columna Izquierda: Identidad Completa y Enfoque Gremial -->
           <div class="lg:col-span-7 space-y-6">
             <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-200 text-xs sm:text-sm font-semibold">
               <span>Entidad Sin Ánimo de Lucro</span>
@@ -139,7 +129,7 @@
               <p class="text-amber-400 font-extrabold tracking-widest text-sm sm:text-base uppercase">
                 Sigla Oficial: A.H.D MARCA SPORTS
               </p>
-              <h1 class="text-2xl sm:text-4xl xl:text-[2.65rem] font-black leading-tight tracking-tight text-white">
+              <h1 class="text-2xl sm:text-4xl xl:text-[2.55rem] font-black leading-tight tracking-tight text-white">
                 ASOCIACIÓN HISPANOAMERICANA DEL DEPORTE MARCA SPORTS — <span class="text-amber-400">MARTÍN CABRERA DEPORTES</span>
               </h1>
               <p class="text-sm sm:text-base font-semibold text-orange-100 leading-relaxed pt-1">
@@ -148,48 +138,36 @@
             </div>
 
             <p class="text-orange-100/90 text-sm sm:text-base leading-relaxed max-w-2xl">
-              Institución de utilidad común y sin ánimo de lucro dedicada a la formación, actualización, representación gremial, asesoría institucional y defensa de los derechos deportivos, formativos, sociales y laborales de los profesionales y actores del deporte en toda Hispanoamérica y el mundo.
+              Institución de utilidad común y sin ánimo de lucro dedicada a la formación, actualización, representación gremial, asesoría institucional y defensa de los derechos formativos, deportivos, sociales y laborales en Hispanoamérica y el mundo.
             </p>
 
-            <!-- Etiquetas de los 8 perfiles profesionales del ámbito deportivo -->
-            <div class="pt-1">
-              <p class="text-xs uppercase tracking-wider text-amber-200/80 font-bold mb-2.5">
-                Perfiles profesionales que integran nuestro gremio:
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Entrenadores</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Asistentes Técnicos</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Preparadores Físicos</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Fisioterapeutas</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Médicos Deportólogos / Deportivos</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Administrativos / Administradores</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Árbitros</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Periodistas Deportivos</span>
-              </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Entrenadores</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Asistentes Técnicos</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Preparadores Físicos</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Fisioterapeutas</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Médicos Deportólogos</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Administrativos</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Árbitros</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/10 border border-amber-300/20 text-xs sm:text-sm font-medium text-white">Periodistas Deportivos</span>
             </div>
 
-            <!-- Botones de Acción -->
             <div class="flex flex-col sm:flex-row gap-3 pt-2">
-              <button
-                type="button"
-                onclick="openModal('afiliacion')"
-                class="px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-extrabold text-sm sm:text-base shadow-lg shadow-black/30 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              <a
+                href="#afiliacion-portal"
+                class="px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-extrabold text-sm sm:text-base shadow-lg transition-all flex items-center justify-center gap-2"
               >
-                <span>Afíliate Gratis en Línea</span>
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </button>
+                <span>Ingresar con Cédula / Afiliarse Gratis</span>
+              </a>
               <a
                 href="#estatutos"
                 class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 border border-amber-200/30 text-white font-semibold text-sm sm:text-base transition-all flex items-center justify-center"
               >
-                Consultar Estatutos y Marco Legal
+                Consultar Estatutos
               </a>
             </div>
           </div>
 
-          <!-- Columna Derecha: Representación Visual Interactiva de Hispanoamérica -->
           <div class="lg:col-span-5">
             <div class="rounded-2xl bg-stone-950/80 border border-amber-500/30 p-5 sm:p-6 shadow-2xl">
               <div class="flex items-center justify-between mb-3">
@@ -202,97 +180,69 @@
                 </span>
               </div>
 
-              <!-- Mapa SVG Estilizado de América / Hispanoamérica con interacción -->
               <div class="relative bg-stone-950/90 rounded-xl border border-amber-900/60 p-3 flex flex-col items-center">
                 <svg
                   viewBox="0 0 360 390"
                   class="w-full max-w-[300px] h-auto"
                   role="img"
-                  aria-label="Representación visual de Hispanoamérica y el continente americano destacando la franja hispanohablante"
+                  aria-label="Representación visual de Hispanoamérica y el continente americano"
                 >
                   <circle cx="180" cy="195" r="175" fill="#170d07" stroke="#451a03" stroke-width="2" />
                   <ellipse cx="180" cy="195" rx="95" ry="175" fill="none" stroke="#451a03" stroke-width="1" stroke-dasharray="4 4" />
                   <line x1="5" y1="195" x2="355" y2="195" stroke="#451a03" stroke-width="1" stroke-dasharray="4 4" />
-
-                  <path
-                    d="M55,45 L135,35 L165,60 L145,95 L110,112 L80,105 L50,75 Z"
-                    fill="#44403c"
-                    stroke="#57534e"
-                    stroke-width="1.2"
-                  />
-                  <path
-                    d="M175,185 L235,188 L260,220 L238,268 L195,270 L172,232 Z"
-                    fill="#44403c"
-                    stroke="#57534e"
-                    stroke-width="1.2"
-                  />
-
+                  <path d="M55,45 L135,35 L165,60 L145,95 L110,112 L80,105 L50,75 Z" fill="#44403c" stroke="#57534e" stroke-width="1.2" />
+                  <path d="M175,185 L235,188 L260,220 L238,268 L195,270 L172,232 Z" fill="#44403c" stroke="#57534e" stroke-width="1.2" />
                   <path
                     class="hispanic-region"
                     data-region="México"
-                    data-info="Capítulo y articulación gremial en México: entrenadores, preparadores físicos, ciencias aplicadas y deporte formativo."
+                    data-info="Articulación gremial en México: entrenadores, preparadores físicos, ciencias aplicadas y deporte formativo."
                     d="M82,110 L122,114 L136,142 L118,162 L92,145 L76,125 Z"
-                    fill="#ea580c"
-                    stroke="#fdba74"
-                    stroke-width="1.4"
+                    fill="#ea580c" stroke="#fdba74" stroke-width="1.4"
                   />
-
                   <path
                     class="hispanic-region"
                     data-region="Centroamérica y Caribe Hispano"
                     data-info="Integración de entrenadores, árbitros, gestores y periodistas deportivos en Centroamérica y el Caribe hispanohablante."
                     d="M126,154 L154,162 L168,184 L156,192 L134,172 Z"
-                    fill="#dc2626"
-                    stroke="#fca5a5"
-                    stroke-width="1.3"
+                    fill="#dc2626" stroke="#fca5a5" stroke-width="1.3"
                   />
                   <circle
                     class="hispanic-region"
                     data-region="Caribe Hispano"
                     data-info="Red de capacitación y actualización deportiva en el Caribe hispano."
-                    cx="176" cy="158" r="5"
-                    fill="#f97316"
+                    cx="176" cy="158" r="5" fill="#f97316"
                   />
-
                   <path
                     class="hispanic-region"
                     data-region="Colombia — Domicilio Principal (Santiago de Cali, Valle)"
-                    data-info="Domicilio principal estatutario en Santiago de Cali, Departamento del Valle del Cauca, República de Colombia. Sede de la dirección ejecutiva y convenios."
+                    data-info="Domicilio principal estatutario en Santiago de Cali, Departamento del Valle del Cauca, República de Colombia."
                     d="M156,184 L182,182 L188,208 L162,214 L152,198 Z"
-                    fill="#f59e0b"
-                    stroke="#fef08a"
-                    stroke-width="1.8"
+                    fill="#f59e0b" stroke="#fef08a" stroke-width="1.8"
                   />
-
                   <path
                     class="hispanic-region"
                     data-region="Suramérica Hispana (Andina y Cono Sur)"
-                    data-info="Amplia comunidad de afiliados, docentes, clubes y escuelas deportivas en Suramérica hispanohablante."
+                    data-info="Comunidad de afiliados, docentes, clubes y escuelas deportivas en Suramérica hispanohablante."
                     d="M182,182 L205,188 L195,212 L162,214 L168,255 L192,272 L184,352 L165,362 L156,315 L152,248 Z"
-                    fill="#c2410c"
-                    stroke="#fdba74"
-                    stroke-width="1.4"
+                    fill="#c2410c" stroke="#fdba74" stroke-width="1.4"
                   />
-
                   <circle cx="166" cy="202" r="4.5" fill="#FFFFFF" stroke="#7c2d12" stroke-width="1.5" />
                 </svg>
 
-                <!-- Caja de Detalle Interactivo de la Región Seleccionada -->
                 <div id="region-detail-box" class="w-full mt-3 p-3 rounded-lg bg-stone-900 border border-amber-800/70 text-xs text-orange-50">
                   <div class="flex items-center justify-between font-bold text-amber-300 mb-1">
                     <span id="region-title">Colombia — Domicilio Principal (Santiago de Cali, Valle)</span>
                     <span class="text-[11px] text-amber-200/70 font-normal">Haz clic en el mapa</span>
                   </div>
                   <p id="region-desc" class="text-orange-100/90 leading-relaxed">
-                    Domicilio principal estatutario en Santiago de Cali, Departamento del Valle del Cauca, República de Colombia. Sede de la dirección ejecutiva y convenios.
+                    Domicilio principal estatutario en Santiago de Cali, Departamento del Valle del Cauca, República de Colombia.
                   </p>
                 </div>
               </div>
 
-              <!-- Indicadores clave rápidos -->
               <div class="grid grid-cols-3 gap-2.5 mt-4 text-center">
                 <div class="p-2.5 rounded-xl bg-white/5 border border-amber-400/20">
-                  <div class="text-lg sm:text-xl font-black text-amber-400">458+</div>
+                  <div id="hero-affiliates-count" class="text-lg sm:text-xl font-black text-amber-400">458+</div>
                   <div class="text-[11px] text-orange-100 font-medium">Afiliados Globales</div>
                 </div>
                 <div class="p-2.5 rounded-xl bg-white/5 border border-amber-400/20">
@@ -311,7 +261,175 @@
     </section>
 
     <!-- ===================================================================== -->
-    <!-- 2. MISIÓN INSTITUCIONAL Y VISIÓN INSTITUCIONAL                      -->
+    <!-- 2. INGRESO POR CÉDULA, REGISTRO CON FOTO/CV Y REGISTROS POR TIPO    -->
+    <!-- ===================================================================== -->
+    <section id="afiliacion-portal" class="py-14 sm:py-20 bg-ahd-cream border-b border-orange-200/70">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-10">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-orange-800 bg-orange-100 px-3 py-1 rounded-full border border-orange-200">
+            Portal de Afiliados y Registro con Fotografía
+          </span>
+          <h2 class="mt-3 text-2xl sm:text-4xl font-black text-ahd-warmDark tracking-tight">
+            Ingreso por Cédula y Registro según Tipo de Afiliación
+          </h2>
+          <p class="mt-2 text-stone-600 text-sm sm:text-base">
+            Ingresa con tu número de cédula si ya estás registrado, o completa el formulario gratuito con tus datos personales, fotografía y hoja de vida.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+          <!-- Columna Izquierda: Ingreso por Cédula -->
+          <div class="lg:col-span-5 rounded-2xl bg-white border border-orange-200 p-6 shadow-xs space-y-4">
+            <h3 class="text-lg font-black text-ahd-warmDark">Ingreso de Afiliados por Cédula</h3>
+            <form id="cedula-login-form" class="space-y-3">
+              <div>
+                <label for="login-cedula" class="block text-xs font-bold text-stone-700 mb-1">Número de cédula o documento</label>
+                <input
+                  id="login-cedula"
+                  type="text"
+                  required
+                  placeholder="Ej. 1012345678"
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 focus:border-orange-600 outline-none text-sm"
+                />
+              </div>
+              <button
+                type="submit"
+                class="w-full py-3 rounded-xl bg-ahd-warmDark hover:bg-ahd-warmMid text-white font-bold text-sm transition-colors cursor-pointer"
+              >
+                Consultar y Entrar
+              </button>
+            </form>
+
+            <div id="login-feedback" class="hidden p-3.5 rounded-xl text-xs sm:text-sm font-medium"></div>
+
+            <div id="active-member-card" class="hidden p-4 rounded-xl bg-orange-50 border border-orange-200 space-y-3">
+              <div class="flex items-center gap-3">
+                <img
+                  id="active-member-photo"
+                  src=""
+                  alt="Fotografía del afiliado"
+                  class="w-14 h-14 rounded-full object-cover border-2 border-orange-600 bg-white"
+                />
+                <div>
+                  <div id="active-member-name" class="font-black text-ahd-warmDark text-sm sm:text-base"></div>
+                  <div id="active-member-role" class="text-xs font-bold text-orange-800"></div>
+                </div>
+              </div>
+              <p id="active-member-meta" class="text-xs text-stone-700 leading-relaxed"></p>
+              <p class="text-xs text-stone-600">
+                Informes: <strong>+57 3227267413</strong> • Carnetización ($20.000 COP) / reporte: <strong>+57 3146584787</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Registro Completo con Datos Personales, Fotografía y Hoja de Vida -->
+          <div class="lg:col-span-7 rounded-2xl bg-white border border-orange-200 p-6 sm:p-7 shadow-xs">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+              <h3 class="text-lg font-black text-ahd-warmDark">Afiliación Gratuita en Línea (Datos, Foto y Hoja de Vida)</h3>
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-100 text-amber-950">Gratuito</span>
+            </div>
+
+            <form id="full-affiliate-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label for="reg-nombre" class="block text-xs font-bold text-stone-700 mb-1">Nombres y apellidos</label>
+                  <input id="reg-nombre" type="text" required placeholder="Ej. Laura Marcela Gómez" class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 focus:border-orange-600 outline-none text-sm" />
+                </div>
+                <div>
+                  <label for="reg-cedula" class="block text-xs font-bold text-stone-700 mb-1">Número de cédula / documento</label>
+                  <input id="reg-cedula" type="text" required placeholder="Ej. 1144556677" class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 focus:border-orange-600 outline-none text-sm" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div>
+                  <label for="reg-tipo" class="block text-xs font-bold text-stone-700 mb-1">Tipo de afiliación / perfil</label>
+                  <select id="reg-tipo" required class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 focus:border-orange-600 outline-none text-sm bg-white">
+                    <option value="Entrenador Deportivo">Entrenador Deportivo</option>
+                    <option value="Asistente Técnico">Asistente Técnico</option>
+                    <option value="Preparador Físico">Preparador Físico</option>
+                    <option value="Fisioterapeuta">Fisioterapeuta</option>
+                    <option value="Médico Deportólogo / Deportivo">Médico Deportólogo / Deportivo</option>
+                    <option value="Administrativo / Administrador">Administrativo / Administrador</option>
+                    <option value="Árbitro">Árbitro</option>
+                    <option value="Periodista Deportivo">Periodista Deportivo</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="reg-clase" class="block text-xs font-bold text-stone-700 mb-1">Clase de asociado (Art. 9)</label>
+                  <select id="reg-clase" required class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 focus:border-orange-600 outline-none text-sm bg-white">
+                    <option value="Adherente">Adherente</option>
+                    <option value="Gestor">Gestor</option>
+                    <option value="Honorario">Honorario</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="reg-telefono" class="block text-xs font-bold text-stone-700 mb-1">Teléfono / WhatsApp</label>
+                  <input id="reg-telefono" type="tel" required placeholder="Ej. +57 300 000 0000" class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 focus:border-orange-600 outline-none text-sm" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label for="reg-correo" class="block text-xs font-bold text-stone-700 mb-1">Correo electrónico</label>
+                  <input id="reg-correo" type="email" required placeholder="correo@ejemplo.com" class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 focus:border-orange-600 outline-none text-sm" />
+                </div>
+                <div>
+                  <label for="reg-ubicacion" class="block text-xs font-bold text-stone-700 mb-1">País y ciudad</label>
+                  <input id="reg-ubicacion" type="text" required placeholder="Ej. Colombia — Santiago de Cali" class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 focus:border-orange-600 outline-none text-sm" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label for="reg-foto" class="block text-xs font-bold text-stone-700 mb-1">Fotografía personal (JPG, PNG, WebP)</label>
+                  <input id="reg-foto" type="file" accept="image/jpeg,image/png,image/webp" required class="w-full px-3 py-2 rounded-xl border border-orange-200 bg-ahd-cream text-xs" />
+                </div>
+                <div>
+                  <label for="reg-cv" class="block text-xs font-bold text-stone-700 mb-1">Adjuntar hoja de vida (PDF, DOC, DOCX)</label>
+                  <input id="reg-cv" type="file" accept=".pdf,.doc,.docx" required class="w-full px-3 py-2 rounded-xl border border-orange-200 bg-ahd-cream text-xs" />
+                </div>
+              </div>
+
+              <div id="reg-feedback" class="hidden p-3.5 rounded-xl bg-amber-50 border border-amber-300 text-amber-950 text-xs sm:text-sm font-medium"></div>
+
+              <button
+                type="submit"
+                class="w-full py-3.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold text-sm shadow-md transition-all cursor-pointer"
+              >
+                Registrar Afiliación con Fotografía y Hoja de Vida
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Directorio / Tarjetas de Afiliados Registrados por Tipo de Afiliación -->
+        <div class="rounded-2xl bg-white border border-orange-200 p-6 sm:p-7 shadow-xs">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+            <div>
+              <h3 class="text-lg sm:text-xl font-black text-ahd-warmDark">Registros con Datos Personales y Fotografía por Tipo de Afiliación</h3>
+              <p class="text-xs sm:text-sm text-stone-600">Filtra los registros guardados en esta sesión según el tipo de afiliación deportiva.</p>
+            </div>
+            <select id="filter-affiliates-type" class="px-3.5 py-2 rounded-xl border border-orange-200 text-xs sm:text-sm font-bold bg-ahd-cream text-ahd-warmDark">
+              <option value="TODOS">Todos los tipos de afiliación</option>
+              <option value="Entrenador Deportivo">Entrenador Deportivo</option>
+              <option value="Asistente Técnico">Asistente Técnico</option>
+              <option value="Preparador Físico">Preparador Físico</option>
+              <option value="Fisioterapeuta">Fisioterapeuta</option>
+              <option value="Médico Deportólogo / Deportivo">Médico Deportólogo / Deportivo</option>
+              <option value="Administrativo / Administrador">Administrativo / Administrador</option>
+              <option value="Árbitro">Árbitro</option>
+              <option value="Periodista Deportivo">Periodista Deportivo</option>
+            </select>
+          </div>
+
+          <div id="affiliates-directory-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. MISIÓN Y VISIÓN INSTITUCIONAL                                    -->
     <!-- ===================================================================== -->
     <section id="mision-vision" class="py-14 sm:py-20 bg-white border-b border-orange-200/70">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -319,494 +437,188 @@
           <span class="text-xs font-extrabold uppercase tracking-widest text-orange-800 bg-orange-100 px-3 py-1 rounded-full border border-orange-200">
             Identidad y Horizonte Estratégico
           </span>
-          <h2 class="mt-3 text-2xl sm:text-4xl font-black text-ahd-warmDark tracking-tight">
-            Misión y Visión Institucional
-          </h2>
-          <p class="mt-2 text-stone-600 text-sm sm:text-base">
-            Principios rectores que orientan la formación, actualización y proyección gremial de la Asociación Hispanoamericana del Deporte Marca Sports.
-          </p>
+          <h2 class="mt-3 text-2xl sm:text-4xl font-black text-ahd-warmDark tracking-tight">Misión y Visión Institucional</h2>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <!-- Tarjeta de Misión Institucional -->
-          <article class="rounded-2xl bg-ahd-cream border border-orange-200 p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-5">
-                <div class="w-12 h-12 rounded-xl bg-orange-600 text-white flex items-center justify-center shadow">
-                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <div>
-                  <span class="text-xs font-bold uppercase tracking-wider text-orange-700">Propósito Esencial</span>
-                  <h3 class="text-xl sm:text-2xl font-extrabold text-ahd-warmDark">Nuestra Misión Institucional</h3>
-                </div>
-              </div>
-
-              <blockquote class="text-stone-700 text-sm sm:text-base leading-relaxed italic border-l-4 border-orange-600 pl-4 py-1 bg-white rounded-r-xl shadow-2xs">
-                “La Asociación Hispanoamericana del Deporte Marca Sports tiene como misión: La formación, capacitación, Actualización integral de personas con competencias para asumir, aplicar y transferir los conocimientos e impactar positivamente la realidad social y deportiva en el mundo, para contribuir al desarrollo sostenible de la Profesión en el deporte.”
-              </blockquote>
-
-              <p class="mt-4 text-stone-700 text-sm sm:text-base leading-relaxed">
-                En esta medida, propende por el logro de la excelencia docente, la calidad en la formación, la investigación, el acompañamiento pedagógico, técnico, laboral y el desarrollo profesional y personal, para lograr las más altas cualidades en nuestros Afiliados.
-              </p>
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-orange-200 flex flex-wrap gap-2">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-orange-100 text-orange-950">Excelencia Docente</span>
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-orange-100 text-orange-950">Investigación y Formación</span>
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-orange-100 text-orange-950">Acompañamiento Integral</span>
-            </div>
+          <article class="rounded-2xl bg-ahd-cream border border-orange-200 p-6 sm:p-8 shadow-xs">
+            <h3 class="text-xl sm:text-2xl font-extrabold text-ahd-warmDark mb-4">Nuestra Misión Institucional</h3>
+            <blockquote class="text-stone-700 text-sm sm:text-base leading-relaxed italic border-l-4 border-orange-600 pl-4 py-1 bg-white rounded-r-xl">
+              “La Asociación Hispanoamericana del Deporte Marca Sports tiene como misión: La formación, capacitación, Actualización integral de personas con competencias para asumir, aplicar y transferir los conocimientos e impactar positivamente la realidad social y deportiva en el mundo, para contribuir al desarrollo sostenible de la Profesión en el deporte.”
+            </blockquote>
+            <p class="mt-4 text-stone-700 text-sm sm:text-base leading-relaxed">
+              Propende por la excelencia docente, la calidad en la formación, la investigación, el acompañamiento pedagógico, técnico, laboral y el desarrollo profesional y personal de los afiliados.
+            </p>
           </article>
 
-          <!-- Tarjeta de Visión Institucional -->
-          <article class="rounded-2xl bg-gradient-to-br from-ahd-warmDark via-ahd-warmMid to-red-950 text-white border border-orange-900/60 p-6 sm:p-8 shadow-md flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-5">
-                <div class="w-12 h-12 rounded-xl bg-amber-500 text-stone-950 flex items-center justify-center shadow">
-                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
-                </div>
-                <div>
-                  <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Proyección Institucional</span>
-                  <h3 class="text-xl sm:text-2xl font-extrabold text-white">Nuestra Visión Institucional</h3>
-                </div>
-              </div>
-
-              <blockquote class="text-orange-50 text-sm sm:text-base leading-relaxed border-l-4 border-amber-400 pl-4 py-1 bg-white/5 rounded-r-xl">
-                Mejorar la calidad en los servicios profesionales de nuestros afiliados, mediante la educación continua y la actualización permanente ante las instituciones académicas y deportivas de mayor relevancia e importancia a nivel nacional e internacional, logrando así en el año 2025 ser una de las mejores Asociaciones en las diferentes disciplinas y áreas del Deporte Hispanoamericano.
-              </blockquote>
-
-              <p class="mt-4 text-orange-100/90 text-sm sm:text-base leading-relaxed">
-                Articulamos el conocimiento técnico, científico, administrativo, jurídico, arbitral y comunicacional para elevar el estándar ético y operativo del talento deportivo en toda la región.
-              </p>
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-orange-800/70 flex flex-wrap gap-2">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-amber-500/20 text-amber-200 border border-amber-400/30">Educación Continua</span>
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-amber-500/20 text-amber-200 border border-amber-400/30">Articulación Académica y Deportiva</span>
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-amber-500/20 text-amber-200 border border-amber-400/30">Liderazgo Hispanoamericano</span>
-            </div>
+          <article class="rounded-2xl bg-gradient-to-br from-ahd-warmDark via-ahd-warmMid to-red-950 text-white border border-orange-900/60 p-6 sm:p-8 shadow-md">
+            <h3 class="text-xl sm:text-2xl font-extrabold text-white mb-4">Nuestra Visión Institucional</h3>
+            <blockquote class="text-orange-50 text-sm sm:text-base leading-relaxed border-l-4 border-amber-400 pl-4 py-1 bg-white/5 rounded-r-xl">
+              Mejorar la calidad en los servicios profesionales de nuestros afiliados, mediante la educación continua y la actualización permanente ante las instituciones académicas y deportivas de mayor relevancia e importancia a nivel nacional e internacional, consolidándose en las disciplinas y áreas del Deporte Hispanoamericano.
+            </blockquote>
+            <p class="mt-4 text-orange-100/90 text-sm sm:text-base leading-relaxed">
+              Articula el conocimiento técnico, científico, administrativo, arbitral y comunicacional para elevar el estándar del gremio deportivo en toda la región.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- ===================================================================== -->
-    <!-- 3. ESTATUTOS Y MARCO INSTITUCIONAL                                    -->
+    <!-- 4. ESTATUTOS Y MARCO INSTITUCIONAL                                    -->
     <!-- ===================================================================== -->
     <section id="estatutos" class="py-14 sm:py-20 bg-ahd-cream border-b border-orange-200/70">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-          <div>
-            <span class="text-xs font-extrabold uppercase tracking-widest text-amber-900 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
-              Estatutos de Asociación — Entidad Sin Ánimo de Lucro
-            </span>
-            <h2 class="mt-3 text-2xl sm:text-4xl font-black text-ahd-warmDark tracking-tight">
-              Estatutos y Marco Institucional
-            </h2>
-            <p class="mt-2 text-stone-600 text-sm sm:text-base max-w-3xl">
-              Régimen jurídico, domicilio principal, duración, patrimonio inicial y estructura de asociados establecidos en los estatutos de <strong>A.H.D MARCA SPORTS</strong>.
-            </p>
-          </div>
+        <div class="mb-10">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-amber-900 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
+            Estatutos — Entidad Sin Ánimo de Lucro
+          </span>
+          <h2 class="mt-3 text-2xl sm:text-4xl font-black text-ahd-warmDark tracking-tight">Estatutos y Marco Institucional</h2>
         </div>
 
-        <!-- Cuadrícula de Fundamentos Estatutarios Clave -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          <div class="rounded-2xl bg-white border border-orange-200/80 p-6 shadow-xs">
-            <div class="text-xs font-bold uppercase tracking-wider text-orange-700 mb-1">Artículos 1 y 2 • Naturaleza</div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="rounded-2xl bg-white border border-orange-200 p-6">
+            <div class="text-xs font-bold uppercase text-orange-700 mb-1">Artículos 1 y 2 • Naturaleza</div>
             <h3 class="text-lg font-extrabold text-ahd-warmDark mb-2">Persona Jurídica de Derecho Privado</h3>
-            <p class="text-sm text-stone-600 leading-relaxed">
-              Institución de utilidad común y <strong>sin ánimo de lucro</strong>, regulada en lo pertinente por los <strong>artículos 633 a 652 del Código Civil Colombiano</strong>, el Decreto 2150 de 1995, el Decreto 427 de 1996 y normas concordantes.
+            <p class="text-sm text-stone-600">
+              Utilidad común y <strong>sin ánimo de lucro</strong>, regulada en lo pertinente por los <strong>artículos 633 a 652 del Código Civil Colombiano</strong>, Decretos 2150 de 1995 y 427 de 1996 y normas concordantes.
             </p>
           </div>
-
-          <div class="rounded-2xl bg-white border border-orange-200/80 p-6 shadow-xs">
-            <div class="text-xs font-bold uppercase tracking-wider text-orange-700 mb-1">Artículos 3 y 4 • Domicilio y Duración</div>
+          <div class="rounded-2xl bg-white border border-orange-200 p-6">
+            <div class="text-xs font-bold uppercase text-orange-700 mb-1">Artículos 3 y 4 • Domicilio y Duración</div>
             <h3 class="text-lg font-extrabold text-ahd-warmDark mb-2">Santiago de Cali, Valle — Duración Indefinida</h3>
-            <p class="text-sm text-stone-600 leading-relaxed">
-              Domicilio principal en <strong>Santiago de Cali, Departamento del Valle, República de Colombia</strong>, con facultad por determinación de la Asamblea General para establecer <strong>capítulos y junta directiva</strong> y realizar actividades en otras ciudades del país y del exterior. Duración <strong>indefinida</strong>.
+            <p class="text-sm text-stone-600">
+              Domicilio principal en <strong>Santiago de Cali, Departamento del Valle, Colombia</strong>, con facultad de establecer capítulos y junta directiva en otras ciudades del país y del exterior. Duración <strong>indefinida</strong>.
             </p>
           </div>
-
-          <div class="rounded-2xl bg-white border border-orange-200/80 p-6 shadow-xs md:col-span-2 lg:col-span-1">
-            <div class="text-xs font-bold uppercase tracking-wider text-red-700 mb-1">Parágrafo 1° y Art. 8 • Patrimonio</div>
+          <div class="rounded-2xl bg-white border border-orange-200 p-6">
+            <div class="text-xs font-bold uppercase text-red-700 mb-1">Parágrafo 1° y Art. 8 • Patrimonio</div>
             <h3 class="text-lg font-extrabold text-ahd-warmDark mb-2">$20.000 COP de Patrimonio Inicial</h3>
-            <p class="text-sm text-stone-600 leading-relaxed">
-              Patrimonio inicial de <strong>veinte mil pesos colombianos ($20.000 COP)</strong> aportados por los asociados gestores. Su destinación es <strong>única y exclusiva al cumplimiento de su objeto social</strong>, salvo la formación de las reservas de ley.
+            <p class="text-sm text-stone-600">
+              Patrimonio inicial de <strong>veinte mil pesos colombianos ($20.000 COP)</strong> aportados por asociados gestores, destinado única y exclusivamente al cumplimiento de su objeto y reservas de ley.
             </p>
-          </div>
-        </div>
-
-        <!-- Desglose Interactivo de Artículos Estatutarios y Clases de Asociados -->
-        <div class="rounded-2xl bg-white border border-orange-200/80 shadow-sm overflow-hidden">
-          <div class="bg-ahd-warmDark text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <div>
-              <h3 class="text-base sm:text-lg font-bold">Objeto Social, Desarrollo y Clases de Asociados (Arts. 5, 6, 9, 10, 11 y 16–18)</h3>
-              <p class="text-xs text-orange-200/80">Selecciona un capítulo estatutario para revisar sus disposiciones principales.</p>
-            </div>
-            <div class="flex flex-wrap gap-2" role="tablist" aria-label="Capítulos de estatutos">
-              <button
-                type="button"
-                role="tab"
-                aria-selected="true"
-                data-statute-tab="objeto"
-                class="statute-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-orange-600 text-white cursor-pointer"
-              >
-                Objeto y Desarrollo
-              </button>
-              <button
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-statute-tab="asociados"
-                class="statute-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white/10 text-orange-100 hover:bg-white/20 cursor-pointer"
-              >
-                3 Clases de Asociados
-              </button>
-              <button
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-statute-tab="gobierno"
-                class="statute-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white/10 text-orange-100 hover:bg-white/20 cursor-pointer"
-              >
-                Órganos de Administración
-              </button>
-            </div>
-          </div>
-
-          <div class="p-6 sm:p-8">
-            <div id="statute-panel-objeto" class="statute-panel space-y-5">
-              <div>
-                <h4 class="text-base sm:text-lg font-extrabold text-ahd-warmDark mb-2">Artículo 5° — Objeto y Bienestar Social de los Asociados</h4>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-stone-700">
-                  <li class="p-3.5 rounded-xl bg-ahd-cream border border-orange-200/70 flex gap-2.5">
-                    <span class="font-black text-orange-700">1)</span>
-                    <span>Capacitar a todos los afiliados a través de charlas, capacitaciones, cursos, diplomados y congresos deportivos desde todos los enfoques del deporte, certificándolos de manera online o presencial.</span>
-                  </li>
-                  <li class="p-3.5 rounded-xl bg-ahd-cream border border-orange-200/70 flex gap-2.5">
-                    <span class="font-black text-orange-700">2)</span>
-                    <span>Asociar a los afiliados con el fin de velar por sus derechos formativos, deportivos, sociales y laborales.</span>
-                  </li>
-                  <li class="p-3.5 rounded-xl bg-ahd-cream border border-orange-200/70 flex gap-2.5">
-                    <span class="font-black text-orange-700">3)</span>
-                    <span>Representar a los afiliados ante los diferentes entes deportivos del Estado y no gubernamentales a nivel nacional e internacional.</span>
-                  </li>
-                  <li class="p-3.5 rounded-xl bg-ahd-cream border border-orange-200/70 flex gap-2.5">
-                    <span class="font-black text-orange-700">4–5)</span>
-                    <span>Asesorar entes deportivos, educativos oficiales y no gubernamentales (administrativo, pedagógico, educativo, social) y contratar con instituciones técnicas, tecnológicas, universitarias, federaciones, clubes, escuelas, entidades del Estado y empresas privadas.</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 class="text-base font-extrabold text-ahd-warmDark mb-2">Artículo 6° — Líneas de Desarrollo Institucional</h4>
-                <p class="text-sm text-stone-600 leading-relaxed">
-                  Desarrollo de programas gremiales, alianzas estratégicas, consorcios o uniones temporales (públicas o privadas, nacionales o extranjeras), apoyo a la investigación deportiva, planes de prevención y difusión comunitaria, mecanismos de financiación y cofinanciación, realización de certámenes y eventos nacionales o internacionales, y fortalecimiento de la identidad cultural y el desarrollo comunitario.
-                </p>
-              </div>
-            </div>
-
-            <div id="statute-panel-asociados" class="statute-panel hidden space-y-5">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <h4 class="text-base sm:text-lg font-extrabold text-ahd-warmDark">Artículo 9° — Tres Clases de Asociados</h4>
-                <span class="text-xs font-semibold text-stone-500">Derechos, deberes y debido proceso (Arts. 10–11)</span>
-              </div>
-
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="p-4 rounded-xl bg-orange-50/90 border border-orange-200">
-                  <span class="inline-block px-2.5 py-0.5 rounded-full bg-orange-700 text-white text-xs font-bold mb-2">Clase 1</span>
-                  <h5 class="font-extrabold text-ahd-warmDark text-base mb-1">Asociados Gestores</h5>
-                  <p class="text-xs sm:text-sm text-stone-700 leading-relaxed">
-                    Constituyentes e impulsadores iniciales de la Asociación (aportantes del patrimonio inicial de $20.000 COP), con participación deliberante y decisoria en la Asamblea General.
-                  </p>
-                </div>
-
-                <div class="p-4 rounded-xl bg-red-50/70 border border-red-200">
-                  <span class="inline-block px-2.5 py-0.5 rounded-full bg-red-700 text-white text-xs font-bold mb-2">Clase 2</span>
-                  <h5 class="font-extrabold text-ahd-warmDark text-base mb-1">Asociados Adherentes</h5>
-                  <p class="text-xs sm:text-sm text-stone-700 leading-relaxed">
-                    Profesionales y actores del ámbito deportivo que se vinculan a la Asociación (con afiliación en línea gratuita) para acceder a capacitación, representación gremial y servicios institucionales.
-                  </p>
-                </div>
-
-                <div class="p-4 rounded-xl bg-amber-50/90 border border-amber-300">
-                  <span class="inline-block px-2.5 py-0.5 rounded-full bg-amber-600 text-white text-xs font-bold mb-2">Clase 3</span>
-                  <h5 class="font-extrabold text-ahd-warmDark text-base mb-1">Asociados Honorarios</h5>
-                  <p class="text-xs sm:text-sm text-stone-700 leading-relaxed">
-                    Personalidades, formadores, dirigentes o referentes destacados por su aporte al deporte y al cumplimiento de los fines de la Asociación.
-                  </p>
-                </div>
-              </div>
-
-              <p class="text-xs sm:text-sm text-stone-600 bg-ahd-cream p-3.5 rounded-xl border border-orange-200/80">
-                <strong>Garantías estatutarias:</strong> Los asociados pueden inspeccionar la gestión, presentar solicitudes motivadas por escrito y postularse a órganos de dirección; toda sanción o expulsión exige solicitud escrita de descargos y sujeción al <strong>debido proceso</strong>, derecho a la defensa y contradicción.
-              </p>
-            </div>
-
-            <div id="statute-panel-gobierno" class="statute-panel hidden space-y-4">
-              <h4 class="text-base sm:text-lg font-extrabold text-ahd-warmDark">Artículos 16 al 18 — Órganos de Dirección, Gobierno y Control</h4>
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-                <div class="p-4 rounded-xl bg-ahd-cream border border-orange-200/80">
-                  <div class="font-extrabold text-ahd-warmDark mb-1">Asamblea General</div>
-                  <p class="text-xs text-stone-600 leading-relaxed">Máxima autoridad deliberante y decisoria; fija políticas generales, aprueba planes, regula el registro de asociados y promueve capítulos.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-ahd-cream border border-orange-200/80">
-                  <div class="font-extrabold text-ahd-warmDark mb-1">Junta Directiva</div>
-                  <p class="text-xs text-stone-600 leading-relaxed">Órgano colegiado de administración y seguimiento con miembros principales y suplentes para el desarrollo institucional.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-ahd-cream border border-orange-200/80">
-                  <div class="font-extrabold text-ahd-warmDark mb-1">Director Ejecutivo</div>
-                  <p class="text-xs text-stone-600 leading-relaxed">Ejerce la representación legal de la Asociación y propone planes y programas sujetos a orientación y aprobación estatutaria.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-ahd-cream border border-orange-200/80">
-                  <div class="font-extrabold text-ahd-warmDark mb-1">Fiscal / Fiscalización</div>
-                  <p class="text-xs text-stone-600 leading-relaxed">Órgano de control y fiscalización interna/revisoría conforme a los estatutos y normatividad vigente.</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ===================================================================== -->
-    <!-- 4. PESTAÑAS INTERACTIVAS: ROLES DEL ECOSISTEMA DEPORTIVO Y AFILIADOS -->
+    <!-- 5. GREMIO DEPORTIVO, CLASES DE ASOCIADOS Y CARNETIZACIÓN             -->
     <!-- ===================================================================== -->
     <section id="ecosistema" class="py-14 sm:py-20 bg-white border-b border-orange-200/70">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mx-auto text-center mb-8">
           <span class="text-xs font-extrabold uppercase tracking-widest text-orange-800 bg-orange-100 px-3 py-1 rounded-full border border-orange-200">
-            Explorador Interactivo
+            Explorador Gremial y Carnet
           </span>
           <h2 class="mt-3 text-2xl sm:text-4xl font-black text-ahd-warmDark tracking-tight">
-            Ecosistema Deportivo y Categorías de Afiliados
+            Ecosistema Deportivo, Asociados y Carnetización
           </h2>
-          <p class="mt-2 text-stone-600 text-sm sm:text-base">
-            Navega entre los roles profesionales del deporte, las clases de asociados, la afiliación gratuita y la carnetización institucional.
-          </p>
         </div>
 
-        <!-- Pestañas Principales Interactivas -->
-        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8" role="tablist" aria-label="Secciones del ecosistema deportivo">
-          <button
-            type="button"
-            role="tab"
-            aria-selected="true"
-            data-eco-tab="roles"
-            class="eco-tab-btn px-4 sm:px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-ahd-warmDark text-white shadow-md transition-all cursor-pointer"
-          >
-            1. Roles en el Ámbito Deportivo (8)
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8" role="tablist">
+          <button type="button" role="tab" aria-selected="true" data-eco-tab="roles" class="eco-tab-btn px-4 sm:px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-ahd-warmDark text-white shadow-md cursor-pointer">
+            1. Roles Deportivos (8)
           </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected="false"
-            data-eco-tab="categorias"
-            class="eco-tab-btn px-4 sm:px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-orange-50 text-stone-700 hover:bg-orange-100 transition-all cursor-pointer"
-          >
-            2. Clases de Asociados
+          <button type="button" role="tab" aria-selected="false" data-eco-tab="categorias" class="eco-tab-btn px-4 sm:px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-orange-50 text-stone-700 hover:bg-orange-100 cursor-pointer">
+            2. Clases de Asociados (Art. 9)
           </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected="false"
-            data-eco-tab="afiliacion"
-            class="eco-tab-btn px-4 sm:px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-orange-50 text-stone-700 hover:bg-orange-100 transition-all cursor-pointer"
-          >
-            3. Afiliación Gratis y Carnetización
+          <button type="button" role="tab" aria-selected="false" data-eco-tab="afiliacion" class="eco-tab-btn px-4 sm:px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-orange-50 text-stone-700 hover:bg-orange-100 cursor-pointer">
+            3. Carnetización ($20.000 COP)
           </button>
         </div>
 
-        <!-- PESTAÑA 1: ROLES EN EL ECOSISTEMA DEPORTIVO -->
         <div id="eco-panel-roles" class="eco-panel tab-panel">
-          <div class="flex flex-wrap items-center justify-between gap-3 mb-6 bg-ahd-cream p-3.5 rounded-xl border border-orange-200/80">
-            <span class="text-xs sm:text-sm font-bold text-stone-700">Filtrar por área funcional:</span>
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-6 bg-ahd-cream p-3.5 rounded-xl border border-orange-200">
+            <span class="text-xs sm:text-sm font-bold text-stone-700">Filtrar por área:</span>
             <div class="flex flex-wrap gap-2">
               <button type="button" data-role-filter="todos" class="role-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-orange-600 text-white cursor-pointer">Todos (8)</button>
-              <button type="button" data-role-filter="tecnico" class="role-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-stone-700 border border-orange-200 hover:bg-orange-50 cursor-pointer">Técnico y Físico</button>
-              <button type="button" data-role-filter="salud" class="role-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-stone-700 border border-orange-200 hover:bg-orange-50 cursor-pointer">Salud Deportiva</button>
-              <button type="button" data-role-filter="gestion-medios" class="role-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-stone-700 border border-orange-200 hover:bg-orange-50 cursor-pointer">Gestión, Arbitraje y Medios</button>
+              <button type="button" data-role-filter="tecnico" class="role-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-stone-700 border border-orange-200 cursor-pointer">Técnico y Físico</button>
+              <button type="button" data-role-filter="salud" class="role-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-stone-700 border border-orange-200 cursor-pointer">Salud Deportiva</button>
+              <button type="button" data-role-filter="gestion-medios" class="role-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-stone-700 border border-orange-200 cursor-pointer">Gestión, Arbitraje y Medios</button>
             </div>
           </div>
 
-          <div id="roles-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div data-area="tecnico" class="role-card rounded-2xl bg-ahd-cream hover:bg-white border border-orange-200/80 hover:border-orange-500 p-5 transition-all shadow-2xs hover:shadow-md">
-              <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-800 flex items-center justify-center font-black text-sm mb-3">01</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div data-area="tecnico" class="role-card rounded-2xl bg-ahd-cream border border-orange-200 p-5">
+              <div class="text-xs font-black text-orange-800 mb-1">01</div>
               <h3 class="text-base font-extrabold text-ahd-warmDark">Entrenadores</h3>
-              <p class="mt-1.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
-                Dirección técnica, planificación táctica, formación en etapas formativas y alto rendimiento, y liderazgo de procesos deportivos.
-              </p>
+              <p class="mt-1.5 text-xs sm:text-sm text-stone-600">Dirección técnica, planificación táctica y formación deportiva.</p>
             </div>
-
-            <div data-area="tecnico" class="role-card rounded-2xl bg-ahd-cream hover:bg-white border border-orange-200/80 hover:border-orange-500 p-5 transition-all shadow-2xs hover:shadow-md">
-              <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-800 flex items-center justify-center font-black text-sm mb-3">02</div>
+            <div data-area="tecnico" class="role-card rounded-2xl bg-ahd-cream border border-orange-200 p-5">
+              <div class="text-xs font-black text-orange-800 mb-1">02</div>
               <h3 class="text-base font-extrabold text-ahd-warmDark">Asistentes Técnicos</h3>
-              <p class="mt-1.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
-                Soporte metodológico, análisis de juego, diseño de tareas y articulación técnica en cuerpos técnicos formativos y profesionales.
-              </p>
+              <p class="mt-1.5 text-xs sm:text-sm text-stone-600">Apoyo metodológico, análisis de juego y soporte al cuerpo técnico.</p>
             </div>
-
-            <div data-area="tecnico" class="role-card rounded-2xl bg-ahd-cream hover:bg-white border border-orange-200/80 hover:border-orange-500 p-5 transition-all shadow-2xs hover:shadow-md">
-              <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-800 flex items-center justify-center font-black text-sm mb-3">03</div>
+            <div data-area="tecnico" class="role-card rounded-2xl bg-ahd-cream border border-orange-200 p-5">
+              <div class="text-xs font-black text-orange-800 mb-1">03</div>
               <h3 class="text-base font-extrabold text-ahd-warmDark">Preparadores Físicos</h3>
-              <p class="mt-1.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
-                Acondicionamiento físico, evolución táctica y carga de entrenamiento en etapas de formación y alto rendimiento.
-              </p>
+              <p class="mt-1.5 text-xs sm:text-sm text-stone-600">Acondicionamiento físico, evolución táctica y cargas de entrenamiento.</p>
             </div>
-
-            <div data-area="salud" class="role-card rounded-2xl bg-ahd-cream hover:bg-white border border-orange-200/80 hover:border-red-500 p-5 transition-all shadow-2xs hover:shadow-md">
-              <div class="w-10 h-10 rounded-xl bg-red-100 text-red-800 flex items-center justify-center font-black text-sm mb-3">04</div>
+            <div data-area="salud" class="role-card rounded-2xl bg-ahd-cream border border-orange-200 p-5">
+              <div class="text-xs font-black text-red-800 mb-1">04</div>
               <h3 class="text-base font-extrabold text-ahd-warmDark">Fisioterapeutas</h3>
-              <p class="mt-1.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
-                Prevención de lesiones, readaptación funcional, recuperación física y cuidado integral del movimiento del deportista.
-              </p>
+              <p class="mt-1.5 text-xs sm:text-sm text-stone-600">Prevención de lesiones, readaptación funcional y recuperación física.</p>
             </div>
-
-            <div data-area="salud" class="role-card rounded-2xl bg-ahd-cream hover:bg-white border border-orange-200/80 hover:border-red-500 p-5 transition-all shadow-2xs hover:shadow-md">
-              <div class="w-10 h-10 rounded-xl bg-red-100 text-red-800 flex items-center justify-center font-black text-sm mb-3">05</div>
+            <div data-area="salud" class="role-card rounded-2xl bg-ahd-cream border border-orange-200 p-5">
+              <div class="text-xs font-black text-red-800 mb-1">05</div>
               <h3 class="text-base font-extrabold text-ahd-warmDark">Médicos Deportólogos / Deportivos</h3>
-              <p class="mt-1.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
-                Valoración médica del deportista, medicina aplicada al ejercicio, prevención clínica y salud integral en el deporte.
-              </p>
+              <p class="mt-1.5 text-xs sm:text-sm text-stone-600">Valoración médica del deportista, medicina aplicada y salud integral.</p>
             </div>
-
-            <div data-area="gestion-medios" class="role-card rounded-2xl bg-ahd-cream hover:bg-white border border-orange-200/80 hover:border-amber-500 p-5 transition-all shadow-2xs hover:shadow-md">
-              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-black text-sm mb-3">06</div>
+            <div data-area="gestion-medios" class="role-card rounded-2xl bg-ahd-cream border border-orange-200 p-5">
+              <div class="text-xs font-black text-amber-900 mb-1">06</div>
               <h3 class="text-base font-extrabold text-ahd-warmDark">Administrativos / Administradores</h3>
-              <p class="mt-1.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
-                Gestión de clubes, escuelas de formación, asociaciones, proyectos deportivos, contratación y sostenibilidad institucional.
-              </p>
+              <p class="mt-1.5 text-xs sm:text-sm text-stone-600">Gestión de clubes, escuelas, entidades y proyectos deportivos.</p>
             </div>
-
-            <div data-area="gestion-medios" class="role-card rounded-2xl bg-ahd-cream hover:bg-white border border-orange-200/80 hover:border-amber-500 p-5 transition-all shadow-2xs hover:shadow-md">
-              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-black text-sm mb-3">07</div>
+            <div data-area="gestion-medios" class="role-card rounded-2xl bg-ahd-cream border border-orange-200 p-5">
+              <div class="text-xs font-black text-amber-900 mb-1">07</div>
               <h3 class="text-base font-extrabold text-ahd-warmDark">Árbitros</h3>
-              <p class="mt-1.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
-                Aplicación imparcial del reglamento, formación continua, actualización normativa y dignificación del arbitraje deportivo.
-              </p>
+              <p class="mt-1.5 text-xs sm:text-sm text-stone-600">Aplicación reglamentaria, actualización normativa y arbitraje deportivo.</p>
             </div>
-
-            <div data-area="gestion-medios" class="role-card rounded-2xl bg-ahd-cream hover:bg-white border border-orange-200/80 hover:border-amber-500 p-5 transition-all shadow-2xs hover:shadow-md">
-              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-black text-sm mb-3">08</div>
+            <div data-area="gestion-medios" class="role-card rounded-2xl bg-ahd-cream border border-orange-200 p-5">
+              <div class="text-xs font-black text-amber-900 mb-1">08</div>
               <h3 class="text-base font-extrabold text-ahd-warmDark">Periodistas Deportivos</h3>
-              <p class="mt-1.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
-                Comunicación responsable, difusión de procesos formativos y gremiales, cobertura deportiva y opinión pública informada.
-              </p>
+              <p class="mt-1.5 text-xs sm:text-sm text-stone-600">Comunicación responsable y difusión del deporte y sus procesos.</p>
             </div>
           </div>
         </div>
 
-        <!-- PESTAÑA 2: CATEGORÍAS DE ASOCIADOS -->
         <div id="eco-panel-categorias" class="eco-panel tab-panel hidden">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="rounded-2xl bg-ahd-cream border-2 border-orange-600/30 p-6 flex flex-col justify-between">
-              <div>
-                <span class="text-xs font-extrabold uppercase tracking-wider text-orange-700">Categoría Estatutaria</span>
-                <h3 class="text-xl font-black text-ahd-warmDark mt-1">Asociados Gestores</h3>
-                <p class="mt-3 text-sm text-stone-600 leading-relaxed">
-                  Miembros fundadores/gestores que impulsan la constitución y sostenibilidad inicial de A.H.D MARCA SPORTS (aportantes del patrimonio inicial de $20.000 COP) e integran la Asamblea General.
-                </p>
-              </div>
-              <div class="mt-5 pt-3 border-t border-orange-200 text-xs font-semibold text-orange-900">
-                Participación plena en Asamblea General y gestión fundacional
-              </div>
+            <div class="rounded-2xl bg-ahd-cream border border-orange-200 p-6">
+              <h3 class="text-lg font-black text-ahd-warmDark">Asociados Gestores</h3>
+              <p class="mt-2 text-sm text-stone-600">Impulsan la constitución y sostenibilidad de la Asociación (aportantes del patrimonio inicial de $20.000 COP) e integran la Asamblea General.</p>
             </div>
-
-            <div class="rounded-2xl bg-ahd-cream border border-orange-200/80 p-6 flex flex-col justify-between">
-              <div>
-                <span class="text-xs font-extrabold uppercase tracking-wider text-red-700">Categoría Estatutaria</span>
-                <h3 class="text-xl font-black text-ahd-warmDark mt-1">Asociados Adherentes</h3>
-                <p class="mt-3 text-sm text-stone-600 leading-relaxed">
-                  Profesionales, técnicos, docentes, estudiantes y miembros del gremio deportivo de cualquier país que se afilian mediante el formulario en línea gratuito para capacitarse y ser representados.
-                </p>
-              </div>
-              <div class="mt-5 pt-3 border-t border-orange-200 text-xs font-semibold text-red-900">
-                Afiliación gratuita en línea • Acceso a capacitaciones y representación
-              </div>
+            <div class="rounded-2xl bg-ahd-cream border border-orange-200 p-6">
+              <h3 class="text-lg font-black text-ahd-warmDark">Asociados Adherentes</h3>
+              <p class="mt-2 text-sm text-stone-600">Profesionales y actores del ámbito deportivo vinculados mediante afiliación gratuita en línea para acceder a capacitación y representación.</p>
             </div>
-
-            <div class="rounded-2xl bg-amber-50/70 border border-amber-300 p-6 flex flex-col justify-between">
-              <div>
-                <span class="text-xs font-extrabold uppercase tracking-wider text-amber-800">Categoría Estatutaria</span>
-                <h3 class="text-xl font-black text-ahd-warmDark mt-1">Asociados Honorarios</h3>
-                <p class="mt-3 text-sm text-stone-600 leading-relaxed">
-                  Figuras relevantes del deporte, la academia o la dirigencia reconocidas por su trayectoria, aporte formativo o contribución al desarrollo del deporte hispanoamericano.
-                </p>
-              </div>
-              <div class="mt-5 pt-3 border-t border-amber-200 text-xs font-semibold text-amber-900">
-                Distinción honorífica por aporte gremial y deportivo
-              </div>
+            <div class="rounded-2xl bg-amber-50 border border-amber-300 p-6">
+              <h3 class="text-lg font-black text-ahd-warmDark">Asociados Honorarios</h3>
+              <p class="mt-2 text-sm text-stone-600">Personas destacadas por su aporte al deporte y al cumplimiento de los fines de A.H.D MARCA SPORTS.</p>
             </div>
           </div>
         </div>
 
-        <!-- PESTAÑA 3: AFILIACIÓN GRATUITA Y CARNETIZACIÓN -->
         <div id="eco-panel-afiliacion" class="eco-panel tab-panel hidden">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-ahd-cream rounded-2xl border border-orange-200/80 p-6 sm:p-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-ahd-cream rounded-2xl border border-orange-200 p-6 sm:p-8">
             <div class="lg:col-span-7 space-y-4">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-900 text-xs font-extrabold">
-                <span>AFILIACIÓN TOTALMENTE GRATIS DILIGENCIANDO UN FORMULARIO EN LÍNEA</span>
-              </div>
-              <h3 class="text-2xl font-black text-ahd-warmDark">
-                Vinculación Gremial y Carnetización Institucional
-              </h3>
-              <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
-                La afiliación a <strong>A.H.D MARCA SPORTS</strong> es gratuita diligenciando el formulario en línea, sumándose a una comunidad global de <strong>458 afiliados de todas partes del mundo</strong>.
+              <span class="inline-block px-3 py-1 rounded-full bg-orange-100 text-orange-950 text-xs font-extrabold">
+                CARNETIZACIÓN VALOR $20.000 PESOS COLOMBIANOS
+              </span>
+              <h3 class="text-2xl font-black text-ahd-warmDark">Acreditación Personal e Intransferible</h3>
+              <p class="text-sm text-stone-600 leading-relaxed">
+                El carnet es personal e intransferible como documento de identificación ante la Asociación y gremios deportivos nacionales e internacionales. En caso de pérdida comunicarse al <strong>+57 3146584787</strong>; mayor información al <strong>+57 3227267413</strong>.
               </p>
-
-              <div class="rounded-xl bg-white border border-orange-200 p-4 space-y-2">
-                <div class="flex items-center justify-between">
-                  <span class="text-sm font-extrabold text-ahd-warmDark">Carnetización Institucional</span>
-                  <span class="px-3 py-1 rounded-lg bg-amber-100 text-amber-950 text-xs sm:text-sm font-black">
-                    Valor: $20.000 Pesos Colombianos
-                  </span>
-                </div>
-                <ul class="text-xs sm:text-sm text-stone-600 space-y-1.5 pt-1">
-                  <li>• El carnet es <strong>personal e intransferible</strong> y acredita como miembro de A.H.D MARCA SPORTS ante la Asociación y gremios deportivos nacionales e internacionales.</li>
-                  <li>• El portador es responsable del cuidado del documento y de darle el uso determinado.</li>
-                  <li>• Líneas institucionales reportadas: <strong>+57 3146584787</strong> (reporte de pérdida / acreditación) y <strong>+57 3227267413</strong> (mayor información y afiliaciones).</li>
-                </ul>
-              </div>
-
-              <div class="flex flex-wrap gap-3 pt-2">
-                <button
-                  type="button"
-                  onclick="openModal('afiliacion')"
-                  class="px-5 py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-sm shadow transition-all cursor-pointer"
-                >
-                  Diligenciar Formulario de Afiliación Gratis
-                </button>
-                <button
-                  type="button"
-                  onclick="openModal('carnet')"
-                  class="px-5 py-3 rounded-xl bg-ahd-warmDark hover:bg-ahd-warmMid text-white font-bold text-sm transition-all cursor-pointer"
-                >
-                  Solicitar Carnetización ($20.000 COP)
-                </button>
-              </div>
             </div>
-
-            <!-- Vista Previa Estilizada del Carnet Acreditativo -->
             <div class="lg:col-span-5">
-              <div class="rounded-2xl bg-gradient-to-b from-amber-200/80 to-orange-100/80 p-4 border-2 border-amber-400/70 shadow-lg">
-                <div class="bg-white rounded-xl border-2 border-orange-700 p-5 text-center space-y-3">
-                  <p class="text-[11px] font-extrabold tracking-wider text-orange-800 uppercase">
-                    Acreditación Oficial de Miembro
-                  </p>
-                  <h4 class="text-sm sm:text-base font-black text-ahd-warmDark leading-snug">
-                    EL PORTADOR DE ESTE CARNET ESTÁ ACREDITADO COMO MIEMBRO DE LA A.H.D MARCA SPORTS
-                  </h4>
-                  <div class="h-0.5 w-24 mx-auto bg-orange-700 rounded-full"></div>
-                  <p class="text-xs text-stone-600 leading-relaxed">
-                    Personal e intransferible. Documento de identificación ante la Asociación y gremios deportivos nacionales e internacionales.
-                  </p>
+              <div class="rounded-2xl bg-gradient-to-b from-amber-200 to-orange-100 p-4 border-2 border-amber-400 shadow-md">
+                <div class="bg-white rounded-xl border-2 border-orange-700 p-5 text-center space-y-2.5">
+                  <h4 class="text-sm font-black text-ahd-warmDark">EL PORTADOR DE ESTE CARNET ESTÁ ACREDITADO COMO MIEMBRO DE LA A.H.D MARCA SPORTS</h4>
+                  <p class="text-xs text-stone-600">Personal e intransferible ante la Asociación y gremios deportivos nacionales e internacionales.</p>
                   <div class="pt-2 border-t border-orange-100 text-xs text-stone-700">
-                    <div class="font-bold text-ahd-warmDark">Presidencia — A.H.D MARCA SPORTS</div>
-                    <div class="text-[11px] text-stone-500 mt-0.5">En caso de pérdida comunicarse al +57 3146584787</div>
+                    <div class="font-bold">Presidencia — A.H.D MARCA SPORTS</div>
+                    <div class="text-[11px] text-stone-500">Reporte de pérdida: +57 3146584787</div>
                   </div>
                 </div>
               </div>
@@ -817,359 +629,153 @@
     </section>
 
     <!-- ===================================================================== -->
-    <!-- 5. CAPACITACIONES REALIZADAS, CONVENIOS Y ALIANZAS                    -->
+    <!-- 6. CAPACITACIONES, ALIANZAS Y CONVENIOS                               -->
     <!-- ===================================================================== -->
     <section id="capacitacion-alianzas" class="py-14 sm:py-20 bg-ahd-cream border-b border-orange-200/70">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-10">
           <div>
             <span class="text-xs font-extrabold uppercase tracking-widest text-orange-800 bg-orange-100 px-3 py-1 rounded-full border border-orange-200">
-              Formación Continua y Cooperación
+              Formación, Eventos y Cooperación
             </span>
             <h2 class="mt-3 text-2xl sm:text-4xl font-black text-ahd-warmDark tracking-tight">
-              Capacitaciones Realizadas, Alianzas y Convenios
+              Capacitaciones, Alianzas y Convenios
             </h2>
-            <p class="mt-2 text-stone-600 text-sm sm:text-base max-w-3xl">
-              Respaldo de <strong>25 años de trayectoria y 115 eventos de capacitación</strong>, junto con convenios estratégicos nacionales e internacionales.
-            </p>
           </div>
           <div class="px-4 py-2.5 rounded-xl bg-ahd-warmDark text-amber-300 text-xs sm:text-sm font-bold shrink-0">
             25 Años • 115 Eventos de Capacitación
           </div>
         </div>
 
-        <!-- Módulos / Ciclos de Capacitación Registrados -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-          <div class="rounded-2xl bg-white border border-orange-200/80 p-5 shadow-2xs">
-            <span class="text-xs font-black text-orange-700 uppercase">N° 1 • Fútbol</span>
-            <h3 class="text-base font-extrabold text-ahd-warmDark mt-1">
-              La preparación física del fútbol en la etapa formativa y de alto rendimiento
-            </h3>
-            <p class="mt-2 text-xs sm:text-sm text-stone-600">
-              Ponente: <strong>P.F. Fabián Bazán (ARG)</strong> • Club Orlando City.
-            </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+          <div class="rounded-2xl bg-white border border-orange-200 p-5">
+            <span class="text-xs font-black text-orange-700 uppercase">Ciclo Formativo • Fútbol</span>
+            <h3 class="text-base font-extrabold text-ahd-warmDark mt-1">Preparación física en etapa formativa y alto rendimiento</h3>
+            <p class="mt-2 text-xs sm:text-sm text-stone-600">Ponente: <strong>P.F. Fabián Bazán (ARG)</strong> • Club Orlando City.</p>
           </div>
-
-          <div class="rounded-2xl bg-white border border-orange-200/80 p-5 shadow-2xs">
-            <span class="text-xs font-black text-orange-700 uppercase">N° 2 • Fútbol</span>
-            <h3 class="text-base font-extrabold text-ahd-warmDark mt-1">
-              En la evolución de la táctica en el fútbol en etapas de formación y de alto rendimiento
-            </h3>
-            <p class="mt-2 text-xs sm:text-sm text-stone-600">
-              Ponentes: <strong>D.T. Manolo Contreras y A.T. Víctor Castro</strong> • Club Yaracuy F.C. (VEN).
-            </p>
+          <div class="rounded-2xl bg-white border border-orange-200 p-5">
+            <span class="text-xs font-black text-orange-700 uppercase">Ciclo Formativo • Fútbol</span>
+            <h3 class="text-base font-extrabold text-ahd-warmDark mt-1">Evolución de la táctica en formación y alto rendimiento</h3>
+            <p class="mt-2 text-xs sm:text-sm text-stone-600">Ponentes: <strong>D.T. Manolo Contreras y A.T. Víctor Castro</strong> • Club Yaracuy F.C. (VEN).</p>
           </div>
-
-          <div class="rounded-2xl bg-white border border-orange-200/80 p-5 shadow-2xs">
-            <span class="text-xs font-black text-orange-700 uppercase">N° 3 • Fútbol</span>
-            <h3 class="text-base font-extrabold text-ahd-warmDark mt-1">
-              Estructuración del fútbol de formación y de alto rendimiento
-            </h3>
-            <p class="mt-2 text-xs sm:text-sm text-stone-600">
-              Ponente: <strong>D.T. Javier Vidales</strong> • Club Atlético de Madrid (ESP).
-            </p>
+          <div class="rounded-2xl bg-white border border-orange-200 p-5">
+            <span class="text-xs font-black text-orange-700 uppercase">Ciclo Formativo • Fútbol</span>
+            <h3 class="text-base font-extrabold text-ahd-warmDark mt-1">Estructuración del fútbol de formación y alto rendimiento</h3>
+            <p class="mt-2 text-xs sm:text-sm text-stone-600">Ponente: <strong>D.T. Javier Vidales</strong> • Club Atlético de Madrid (ESP).</p>
           </div>
-
-          <div class="rounded-2xl bg-white border border-orange-200/80 p-5 shadow-2xs">
-            <span class="text-xs font-black text-orange-700 uppercase">N° 4 • Fútbol</span>
-            <h3 class="text-base font-extrabold text-ahd-warmDark mt-1">
-              Captación de talentos futbolísticos
-            </h3>
-            <p class="mt-2 text-xs sm:text-sm text-stone-600">
-              Ponente: <strong>Director Carlos Jr. Cintra</strong> • Club Fluminense F.C. (BRA).
-            </p>
+          <div class="rounded-2xl bg-white border border-orange-200 p-5">
+            <span class="text-xs font-black text-orange-700 uppercase">Ciclo Formativo • Fútbol</span>
+            <h3 class="text-base font-extrabold text-ahd-warmDark mt-1">Captación de talentos futbolísticos</h3>
+            <p class="mt-2 text-xs sm:text-sm text-stone-600">Ponente: <strong>Director Carlos Jr. Cintra</strong> • Club Fluminense F.C. (BRA).</p>
           </div>
-
-          <div class="rounded-2xl bg-white border border-orange-200/80 p-5 shadow-2xs">
-            <span class="text-xs font-black text-red-700 uppercase">N° 5 • Planificación</span>
-            <h3 class="text-base font-extrabold text-ahd-warmDark mt-1">
-              Metodología Ágil de Micovi
-            </h3>
-            <p class="mt-2 text-xs sm:text-sm text-stone-600">
-              Ponente: <strong>Prof. Milton Correa Viloria (COL)</strong>.
-            </p>
+          <div class="rounded-2xl bg-white border border-orange-200 p-5">
+            <span class="text-xs font-black text-red-700 uppercase">Planificación y Metodología</span>
+            <h3 class="text-base font-extrabold text-ahd-warmDark mt-1">Metodología Ágil de Micovi y Plataformas Virtuales</h3>
+            <p class="mt-2 text-xs sm:text-sm text-stone-600">Ponente: <strong>Prof. Milton Correa Viloria (COL)</strong> • Ing. Jorge Araque.</p>
           </div>
-
-          <div class="rounded-2xl bg-white border border-orange-200/80 p-5 shadow-2xs">
-            <span class="text-xs font-black text-amber-800 uppercase">N° 6 • Marco Jurídico</span>
-            <h3 class="text-base font-extrabold text-ahd-warmDark mt-1">
-              Derecho Deportivo
-            </h3>
-            <p class="mt-2 text-xs sm:text-sm text-stone-600">
-              Actualización normativa, regulación gremial y defensa jurídica en el entorno deportivo.
-            </p>
+          <div class="rounded-2xl bg-white border border-orange-200 p-5">
+            <span class="text-xs font-black text-amber-800 uppercase">Salud y Voleibol / Derecho</span>
+            <h3 class="text-base font-extrabold text-ahd-warmDark mt-1">Primeros Auxilios Básicos, Minivoley y Derecho Deportivo</h3>
+            <p class="mt-2 text-xs sm:text-sm text-stone-600">Entrenador Mario de Brito • Enfermera Nicole Cárdenas • Asociación Argentina de Voleibol.</p>
           </div>
         </div>
 
-        <!-- Alianzas Institucionales y Convenio Marco -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          <div class="lg:col-span-5 rounded-2xl bg-white border border-orange-200/80 p-6 space-y-4">
-            <h3 class="text-lg font-extrabold text-ahd-warmDark">Alianzas y Entidades Vinculadas</h3>
-            <div class="p-4 rounded-xl bg-amber-50/90 border border-amber-300">
-              <div class="font-black text-amber-950 text-base">FICIED</div>
-              <div class="text-xs font-semibold text-amber-900">Federación Internacional de Coaching, Innovación y Emprendimiento Deportivo</div>
+          <div class="lg:col-span-5 rounded-2xl bg-white border border-orange-200 p-6 space-y-3">
+            <h3 class="text-lg font-extrabold text-ahd-warmDark">Alianzas y Convenios Vinculados</h3>
+            <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-300 text-xs sm:text-sm">
+              <strong>FICIED</strong> — Federación Internacional de Coaching, Innovación y Emprendimiento Deportivo.
             </div>
-            <div class="p-4 rounded-xl bg-orange-50/90 border border-orange-300">
-              <div class="font-black text-orange-950 text-base">AICIED (Perú)</div>
-              <div class="text-xs font-semibold text-orange-900">Asociación Internacional de Coaching, Innovación y Emprendimiento Deportivo</div>
+            <div class="p-3.5 rounded-xl bg-orange-50 border border-orange-300 text-xs sm:text-sm">
+              <strong>AICIED (Perú)</strong> — Asociación Internacional de Coaching, Innovación y Emprendimiento Deportivo.
+            </div>
+            <div class="p-3.5 rounded-xl bg-ahd-cream border border-orange-200 text-xs sm:text-sm">
+              <strong>Fluminense F.C. (Brasil)</strong> • <strong>IFDES</strong> • <strong>Derechos del Fútbol</strong>.
             </div>
           </div>
 
-          <div class="lg:col-span-7 rounded-2xl bg-gradient-to-br from-ahd-warmDark to-ahd-warmMid text-white p-6 sm:p-7 flex flex-col justify-between">
-            <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Convenio Marco Institucional</span>
-              <h3 class="text-xl font-extrabold mt-1 mb-3">
-                Practicantes Virtuales en Educación Física, Recreación y Deportes
-              </h3>
-              <p class="text-sm text-orange-100/90 leading-relaxed">
-                A través de nuestro Convenio Marco Institucional se facilitan a las <strong>escuelas de formación deportiva, clubes deportivos, asociaciones, corporaciones, jardines infantiles y colegios públicos y privados</strong> practicantes de la carrera de <strong>Educación Física, Recreación y Deportes</strong> como apoyo en entrenamientos, desarrollo de planes de trabajo, guías y apoyo administrativo de manera virtual.
-              </p>
-            </div>
-            <div class="mt-5 pt-4 border-t border-orange-800/70 flex flex-wrap items-center justify-between gap-3">
-              <span class="text-xs text-orange-200">¿Representas una institución deportiva o educativa?</span>
-              <button
-                type="button"
-                onclick="openModal('convenio')"
-                class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 text-xs sm:text-sm font-extrabold transition-colors cursor-pointer"
-              >
-                Solicitar Información de Convenio
-              </button>
-            </div>
+          <div class="lg:col-span-7 rounded-2xl bg-gradient-to-br from-ahd-warmDark to-ahd-warmMid text-white p-6 sm:p-7">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Convenio Marco Institucional</span>
+            <h3 class="text-xl font-extrabold mt-1 mb-3">Practicantes Virtuales en Educación Física, Recreación y Deportes</h3>
+            <p class="text-sm text-orange-100/90 leading-relaxed">
+              Se facilitan a escuelas de formación deportiva, clubes deportivos, asociaciones, corporaciones, jardines infantiles y colegios públicos y privados practicantes de Educación Física, Recreación y Deportes como apoyo en entrenamientos, planes de trabajo, guías y apoyo administrativo de manera virtual.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ===================================================================== -->
-    <!-- 6. ORGANIGRAMA Y ESTRUCTURA DIRECTIVA                                 -->
+    <!-- 7. GALERÍA DE VIDEOS Y CONTADOR LOCAL DE INTERACCIÓN                 -->
     <!-- ===================================================================== -->
-    <section id="organigrama" class="py-14 sm:py-20 bg-white">
+    <section id="videos-comercial" class="py-14 sm:py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center mb-12">
-          <span class="text-xs font-extrabold uppercase tracking-widest text-orange-900 bg-orange-100 px-3 py-1 rounded-full border border-orange-200">
-            Gobierno Institucional
+        <div class="mb-8">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-orange-800 bg-orange-100 px-3 py-1 rounded-full border border-orange-200">
+            Multimedia y Actividad
           </span>
           <h2 class="mt-3 text-2xl sm:text-4xl font-black text-ahd-warmDark tracking-tight">
-            Organigrama Directivo
+            Videos de Capacitación / Eventos y Contador de Sesión
           </h2>
-          <p class="mt-2 text-stone-600 text-sm sm:text-base">
-            Conformación directiva, fiscalización y miembros suplentes registrados en los documentos institucionales de A.H.D MARCA SPORTS.
-          </p>
         </div>
 
-        <div class="max-w-xl mx-auto mb-8">
-          <div class="rounded-2xl bg-ahd-warmDark text-white p-6 text-center shadow-md border-b-4 border-amber-500">
-            <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Presidencia / Representación Legal</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1">Esp. Manuel Martín Cabrera Angulo</h3>
-            <p class="text-xs sm:text-sm text-orange-200 mt-1">Presidente</p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-10">
+          <div class="lg:col-span-7 rounded-2xl bg-ahd-cream border border-orange-200 p-6">
+            <h3 class="text-lg font-black text-ahd-warmDark mb-4">Subir Video (Previsualización en Sesión)</h3>
+            <form id="video-upload-form" class="space-y-3">
+              <div>
+                <label for="vid-titulo" class="block text-xs font-bold text-stone-700 mb-1">Título del video</label>
+                <input id="vid-titulo" type="text" required placeholder="Ej. Clínica de táctica y preparación física" class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 bg-white text-sm" />
+              </div>
+              <div>
+                <label for="vid-autor" class="block text-xs font-bold text-stone-700 mb-1">Ponente o afiliado</label>
+                <input id="vid-autor" type="text" required placeholder="Nombre del ponente o afiliado" class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 bg-white text-sm" />
+              </div>
+              <div>
+                <label for="vid-archivo" class="block text-xs font-bold text-stone-700 mb-1">Archivo de video (MP4, WebM, OGG)</label>
+                <input id="vid-archivo" type="file" accept="video/mp4,video/webm,video/ogg" required class="w-full px-3 py-2 rounded-xl border border-orange-200 bg-white text-xs" />
+              </div>
+              <button type="submit" class="px-5 py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-sm cursor-pointer">
+                Publicar en Galería Local
+              </button>
+            </form>
+            <div id="video-feedback" class="hidden mt-3 p-3 rounded-xl bg-amber-50 border border-amber-300 text-xs font-semibold text-amber-950"></div>
           </div>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
-          <div class="rounded-2xl bg-ahd-cream border border-orange-200/80 p-5 text-center">
-            <span class="text-xs font-bold uppercase text-orange-700">Junta Directiva</span>
-            <h4 class="text-base font-extrabold text-ahd-warmDark mt-1">Manuel Esteban Cabrera Benítez</h4>
-          </div>
-          <div class="rounded-2xl bg-ahd-cream border border-orange-200/80 p-5 text-center">
-            <span class="text-xs font-bold uppercase text-orange-700">Secretaría — Junta Directiva</span>
-            <h4 class="text-base font-extrabold text-ahd-warmDark mt-1">Nicole Cárdenas Buitrago</h4>
-          </div>
-          <div class="rounded-2xl bg-ahd-cream border border-orange-200/80 p-5 text-center">
-            <span class="text-xs font-bold uppercase text-orange-700">Tesorería — Junta Directiva</span>
-            <h4 class="text-base font-extrabold text-ahd-warmDark mt-1">Omar Cubillán Ávila / José Omar Cubillán Ávila</h4>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
-          <div class="rounded-2xl bg-ahd-cream border border-orange-200/80 p-5 text-center">
-            <span class="text-xs font-bold uppercase text-red-700">Fiscal Interno</span>
-            <h4 class="text-base font-extrabold text-ahd-warmDark mt-1">Dr. Edson Cubillán</h4>
-          </div>
-          <div class="rounded-2xl bg-ahd-cream border border-orange-200/80 p-5 text-center">
-            <span class="text-xs font-bold uppercase text-red-700">Revisor Fiscal</span>
-            <h4 class="text-base font-extrabold text-ahd-warmDark mt-1">Dr. Iván Demetrio</h4>
-          </div>
-        </div>
-
-        <div class="rounded-2xl bg-ahd-cream border border-orange-200/80 p-6 sm:p-8">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+          <div class="lg:col-span-5 rounded-2xl bg-amber-50/80 border border-amber-300 p-6 flex flex-col justify-between">
             <div>
-              <span class="text-xs font-extrabold uppercase tracking-wider text-orange-700">Suplencias y Asesoría</span>
-              <h3 class="text-lg sm:text-xl font-black text-ahd-warmDark">Miembros Suplentes y Abogado Asesor</h3>
+              <h3 class="text-lg font-black text-ahd-warmDark mb-2">Invitación y Métrica Local</h3>
+              <p class="text-xs sm:text-sm text-stone-700 leading-relaxed mb-4">
+                La A.H.D Marca Sports invita a participar en sus capacitaciones para seguir creciendo y estar al día en torno al deporte. Informes al <strong>+57 3227267413</strong>.
+              </p>
+              <div class="grid grid-cols-2 gap-3 mb-4">
+                <div class="p-3 rounded-xl bg-white border border-amber-200">
+                  <div id="session-clicks" class="text-xl font-black text-orange-700">0</div>
+                  <div class="text-[11px] text-stone-600">Clics en botones</div>
+                </div>
+                <div class="p-3 rounded-xl bg-white border border-amber-200">
+                  <div id="session-sim-cop" class="text-xl font-black text-red-700">$0 COP</div>
+                  <div class="text-[11px] text-stone-600">Simulación local ($50/clic)</div>
+                </div>
+              </div>
             </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-center">
-            <div class="p-4 rounded-xl bg-white border border-orange-200">
-              <div class="text-[11px] font-bold uppercase text-orange-700">Presidente Suplente</div>
-              <div class="text-sm font-extrabold text-ahd-warmDark mt-1">Miguel Antonio Cabrera Angulo</div>
-            </div>
-            <div class="p-4 rounded-xl bg-white border border-orange-200">
-              <div class="text-[11px] font-bold uppercase text-stone-600">Junta Directiva (Suplente)</div>
-              <div class="text-sm font-extrabold text-ahd-warmDark mt-1">Oscar Benavidez</div>
-            </div>
-            <div class="p-4 rounded-xl bg-white border border-orange-200">
-              <div class="text-[11px] font-bold uppercase text-stone-600">Junta Directiva (Suplente)</div>
-              <div class="text-sm font-extrabold text-ahd-warmDark mt-1">Rosita Cabrera / Rosita Cabrera Angulo</div>
-            </div>
-            <div class="p-4 rounded-xl bg-white border border-orange-200">
-              <div class="text-[11px] font-bold uppercase text-stone-600">Junta Directiva (Suplente)</div>
-              <div class="text-sm font-extrabold text-ahd-warmDark mt-1">Wilfredo Machado</div>
-            </div>
-            <div class="p-4 rounded-xl bg-amber-50/90 border border-amber-300">
-              <div class="text-[11px] font-bold uppercase text-amber-900">Abogado Asesor</div>
-              <div class="text-sm font-extrabold text-ahd-warmDark mt-1">Dr. Pablo Brueñas</div>
-            </div>
+            <p class="text-[11px] text-stone-600">
+              * Simulación local sin pago real. Los ingresos comerciales en producción requieren redes publicitarias o convenios aprobados.
+            </p>
           </div>
         </div>
+
+        <div id="videos-gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
       </div>
     </section>
   </main>
 
-  <!-- ===================================================================== -->
-  <!-- PIE DE PÁGINA INSTITUCIONAL                                           -->
-  <!-- ===================================================================== -->
-  <footer class="bg-ahd-warmDark text-orange-100/80 border-t border-orange-900/60 py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-orange-900/60">
-        <div class="space-y-2">
-          <div class="text-white font-black text-base tracking-wide">A.H.D MARCA SPORTS</div>
-          <p class="text-xs sm:text-sm text-orange-200/75 leading-relaxed">
-            Asociación Hispanoamericana del Deporte Marca Sports — Martín Cabrera Deportes. Entidad sin ánimo de lucro, persona jurídica de derecho privado (Arts. 633 a 652 del Código Civil Colombiano).
-          </p>
-        </div>
-
-        <div class="space-y-2 text-xs sm:text-sm">
-          <div class="text-amber-300 font-bold uppercase tracking-wider text-xs">Domicilio y Cobertura</div>
-          <p class="text-orange-100">Domicilio principal: Santiago de Cali, Valle, Colombia.</p>
-          <p class="text-orange-200/75">Duración: Indefinida • Alcance Hispanoamericano y Mundial.</p>
-        </div>
-
-        <div class="space-y-2 text-xs sm:text-sm">
-          <div class="text-amber-300 font-bold uppercase tracking-wider text-xs">Canales Institucionales</div>
-          <p class="text-orange-100">Mayor información y afiliación: <strong class="text-amber-400">+57 3227267413</strong></p>
-          <p class="text-orange-100">Reporte / acreditación de carnet: <strong class="text-orange-400">+57 3146584787</strong></p>
-          <p class="text-orange-200/75">¡Anímate, afíliate y conoce nuestra A.H.D! Te esperamos.</p>
-        </div>
-      </div>
-
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-orange-200/75">
-        <p>ASOCIACIÓN HISPANOAMERICANA DEL DEPORTE MARCA SPORTS — MARTÍN CABRERA DEPORTES.</p>
-        <button
-          type="button"
-          onclick="openModal('afiliacion')"
-          class="text-amber-400 hover:text-amber-300 font-semibold underline cursor-pointer"
-        >
-          Formulario de Afiliación en Línea
-        </button>
-      </div>
+  <footer class="bg-ahd-warmDark text-orange-100/80 border-t border-orange-900/60 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <p><strong>A.H.D MARCA SPORTS</strong> — Santiago de Cali, Valle, Colombia • Informes: +57 3227267413 • Carnet: +57 3146584787</p>
+      <p class="text-amber-300">¡Anímate, afíliate y conoce nuestra A.H.D! Te esperamos.</p>
     </div>
   </footer>
-
-  <!-- ===================================================================== -->
-  <!-- MODAL INTERACTIVO (AFILIACIÓN EN LÍNEA / CARNET / CONVENIOS)        -->
-  <!-- ===================================================================== -->
-  <div
-    id="action-modal"
-    class="fixed inset-0 z-50 hidden items-center justify-center bg-stone-950/75 backdrop-blur-xs p-4"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modal-title"
-  >
-    <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-7 shadow-2xl border border-orange-200 relative">
-      <div class="flex items-start justify-between gap-4 mb-4">
-        <div>
-          <span id="modal-badge" class="text-xs font-extrabold uppercase tracking-wider text-orange-800 bg-orange-100 px-2.5 py-0.5 rounded-full">
-            Afiliación En Línea
-          </span>
-          <h3 id="modal-title" class="text-xl font-black text-ahd-warmDark mt-1.5">
-            Formulario de Afiliación Gratuita
-          </h3>
-        </div>
-        <button
-          id="close-modal-btn"
-          type="button"
-          aria-label="Cerrar ventana"
-          class="p-2 rounded-xl text-stone-500 hover:text-stone-900 hover:bg-orange-50 cursor-pointer"
-        >
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-
-      <form id="modal-form" class="space-y-4">
-        <div>
-          <label for="full-name" class="block text-xs font-bold text-stone-700 mb-1">Nombre completo</label>
-          <input
-            id="full-name"
-            type="text"
-            required
-            placeholder="Ej. Carlos Andrés Restrepo"
-            class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 focus:border-orange-600 focus:ring-2 focus:ring-orange-600/20 outline-none text-sm"
-          />
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label for="country-city" class="block text-xs font-bold text-stone-700 mb-1">País y Ciudad</label>
-            <input
-              id="country-city"
-              type="text"
-              required
-              placeholder="Ej. Santiago de Cali, Colombia"
-              class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 focus:border-orange-600 focus:ring-2 focus:ring-orange-600/20 outline-none text-sm"
-            />
-          </div>
-          <div>
-            <label for="role-select" class="block text-xs font-bold text-stone-700 mb-1">Perfil en el ámbito deportivo</label>
-            <select
-              id="role-select"
-              class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 focus:border-orange-600 focus:ring-2 focus:ring-orange-600/20 outline-none text-sm bg-white"
-            >
-              <option>Entrenador</option>
-              <option>Asistente Técnico</option>
-              <option>Preparador Físico</option>
-              <option>Fisioterapeuta</option>
-              <option>Médico Deportólogo / Deportivo</option>
-              <option>Administrativo / Administrador</option>
-              <option>Árbitro</option>
-              <option>Periodista Deportivo</option>
-              <option>Institución / Club / Escuela (Convenio)</option>
-            </select>
-          </div>
-        </div>
-
-        <div>
-          <label for="notes-input" class="block text-xs font-bold text-stone-700 mb-1">Observaciones o solicitud</label>
-          <textarea
-            id="notes-input"
-            rows="2"
-            placeholder="Indica tu interés en capacitación, afiliación gratuita, carnetización ($20.000 COP) o convenio..."
-            class="w-full px-3.5 py-2.5 rounded-xl border border-orange-200 focus:border-orange-600 focus:ring-2 focus:ring-orange-600/20 outline-none text-sm"
-          ></textarea>
-        </div>
-
-        <div id="form-feedback" class="hidden p-3.5 rounded-xl bg-amber-50 border border-amber-300 text-amber-950 text-xs sm:text-sm font-medium"></div>
-
-        <div class="flex items-center justify-end gap-3 pt-2">
-          <button
-            type="button"
-            id="cancel-modal-btn"
-            class="px-4 py-2.5 rounded-xl border border-orange-200 text-stone-700 text-sm font-semibold hover:bg-orange-50 cursor-pointer"
-          >
-            Cerrar
-          </button>
-          <button
-            type="submit"
-            class="px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-sm font-bold shadow cursor-pointer"
-          >
-            Registrar Solicitud
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
 
   <script src="app.js"></script>
 </body>
